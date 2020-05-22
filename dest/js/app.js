@@ -52,6 +52,25 @@ var initPreventBehavior = function initPreventBehavior() {
 };
 
 /**
+ * @description Window on load.
+ */
+window.addEventListener('load', function (ev) {
+  initHeaderFixed();
+});
+
+/**
+ * @description Window on resize.
+ */
+window.addEventListener('resize', function (ev) {});
+
+/**
+ * @description Window on scroll.
+ */
+window.addEventListener('scroll', function (ev) {
+  initHeaderFixed();
+});
+
+/**
  * @description Document DOM ready.
  */
 (function () {
@@ -75,7 +94,6 @@ var initPreventBehavior = function initPreventBehavior() {
     // ==========================================
 
     // lib
-    initHeaderFixed();
     // ==========================================
 
     // callback

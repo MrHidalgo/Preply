@@ -6,6 +6,13 @@
 	top: 0;
 	left: 0;
 	width: 100%;
+	background-color: rgba(#ffffff, 0.95);
+	@include transition(box-shadow);
+
+	&.header--fixed {
+		box-shadow: 0 2px 5px 0 rgba($c-black, 0.15);
+		@include transition(box-shadow);
+	}
 
 	&__wrapper {
 		display: flex;

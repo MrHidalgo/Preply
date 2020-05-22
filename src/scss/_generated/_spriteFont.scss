@@ -30,14 +30,17 @@
 	@if $filename == facebook {
 		$char: "\E001";
 	}
-	@if $filename == mail {
+	@if $filename == flash {
 		$char: "\E002";
 	}
-	@if $filename == play {
+	@if $filename == mail {
 		$char: "\E003";
 	}
-	@if $filename == vk {
+	@if $filename == play {
 		$char: "\E004";
+	}
+	@if $filename == vk {
+		$char: "\E005";
 	}
 
 	@return $char;
@@ -56,6 +59,10 @@
 
 .icon-facebook {
 	@include icon(facebook);
+
+}
+.icon-flash {
+	@include icon(flash);
 
 }
 .icon-mail {
