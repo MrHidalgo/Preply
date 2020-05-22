@@ -1,6 +1,6 @@
 @charset "UTF-8";
 /* line 14, src/scss/_utilities/_extend.scss */
-.details__image img {
+.details__image img, .sticky__box-img img {
   position: absolute;
   top: 0;
   left: 0;
@@ -13,45 +13,75 @@
 }
 
 /* line 1, src/scss/_generated/_spriteSVG.scss */
+.icon-chile-flag {
+  width: 19px;
+  height: 12px;
+}
+
+/* line 5, src/scss/_generated/_spriteSVG.scss */
 .icon-chinese {
   width: 54px;
   height: 54px;
 }
 
-/* line 5, src/scss/_generated/_spriteSVG.scss */
+/* line 9, src/scss/_generated/_spriteSVG.scss */
+.icon-chinese-flag {
+  width: 19px;
+  height: 12px;
+}
+
+/* line 13, src/scss/_generated/_spriteSVG.scss */
+.icon-france-flag {
+  width: 19px;
+  height: 12px;
+}
+
+/* line 17, src/scss/_generated/_spriteSVG.scss */
 .icon-french {
   width: 54px;
   height: 54px;
 }
 
-/* line 9, src/scss/_generated/_spriteSVG.scss */
+/* line 21, src/scss/_generated/_spriteSVG.scss */
 .icon-half-star {
   width: 512px;
   height: 512px;
 }
 
-/* line 13, src/scss/_generated/_spriteSVG.scss */
+/* line 25, src/scss/_generated/_spriteSVG.scss */
 .icon-russian {
   width: 54px;
   height: 54px;
 }
 
-/* line 17, src/scss/_generated/_spriteSVG.scss */
+/* line 29, src/scss/_generated/_spriteSVG.scss */
 .icon-spanish {
   width: 54px;
   height: 54px;
 }
 
-/* line 21, src/scss/_generated/_spriteSVG.scss */
+/* line 33, src/scss/_generated/_spriteSVG.scss */
 .icon-star {
   width: 510px;
   height: 510px;
 }
 
-/* line 25, src/scss/_generated/_spriteSVG.scss */
+/* line 37, src/scss/_generated/_spriteSVG.scss */
+.icon-ukraine-flag {
+  width: 19px;
+  height: 12px;
+}
+
+/* line 41, src/scss/_generated/_spriteSVG.scss */
 .icon-usa {
   width: 54px;
   height: 54px;
+}
+
+/* line 45, src/scss/_generated/_spriteSVG.scss */
+.icon-usa-flag {
+  width: 19px;
+  height: 12px;
 }
 
 @font-face {
@@ -595,22 +625,22 @@ picture {
   left: 0;
   width: 100%;
   background-color: rgba(255, 255, 255, 0.95);
-  -webkit-transition: -webkit-box-shadow 0.3s ease-in-out;
-  transition: -webkit-box-shadow 0.3s ease-in-out;
-  -o-transition: box-shadow 0.3s ease-in-out;
-  transition: box-shadow 0.3s ease-in-out;
-  transition: box-shadow 0.3s ease-in-out, -webkit-box-shadow 0.3s ease-in-out;
+  -webkit-transition: -webkit-box-shadow 0.4s ease-in-out;
+  transition: -webkit-box-shadow 0.4s ease-in-out;
+  -o-transition: box-shadow 0.4s ease-in-out;
+  transition: box-shadow 0.4s ease-in-out;
+  transition: box-shadow 0.4s ease-in-out, -webkit-box-shadow 0.4s ease-in-out;
 }
 
 /* line 12, src/scss/_components/_header.scss */
 .header.header--fixed {
   -webkit-box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.15);
           box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.15);
-  -webkit-transition: -webkit-box-shadow 0.3s ease-in-out;
-  transition: -webkit-box-shadow 0.3s ease-in-out;
-  -o-transition: box-shadow 0.3s ease-in-out;
-  transition: box-shadow 0.3s ease-in-out;
-  transition: box-shadow 0.3s ease-in-out, -webkit-box-shadow 0.3s ease-in-out;
+  -webkit-transition: -webkit-box-shadow 0.4s ease-in-out;
+  transition: -webkit-box-shadow 0.4s ease-in-out;
+  -o-transition: box-shadow 0.4s ease-in-out;
+  transition: box-shadow 0.4s ease-in-out;
+  transition: box-shadow 0.4s ease-in-out, -webkit-box-shadow 0.4s ease-in-out;
 }
 
 /* line 17, src/scss/_components/_header.scss */
@@ -1195,6 +1225,230 @@ picture {
   text-align: center;
   letter-spacing: 0.2px;
   color: #384047;
+}
+
+/* line 18, src/scss/_components/homepage/_sticky.scss */
+.sticky__box {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+  -webkit-align-items: flex-start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  min-height: 68px;
+}
+
+/* line 24, src/scss/_components/homepage/_sticky.scss */
+.sticky__box:hover .sticky__box-right {
+  -webkit-box-shadow: 0px 2px 4px rgba(56, 64, 71, 0.16);
+          box-shadow: 0px 2px 4px rgba(56, 64, 71, 0.16);
+  -webkit-transition: -webkit-box-shadow 0.4s ease-in-out;
+  transition: -webkit-box-shadow 0.4s ease-in-out;
+  -o-transition: box-shadow 0.4s ease-in-out;
+  transition: box-shadow 0.4s ease-in-out;
+  transition: box-shadow 0.4s ease-in-out, -webkit-box-shadow 0.4s ease-in-out;
+}
+
+/* line 30, src/scss/_components/homepage/_sticky.scss */
+.sticky__box-wrapper {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding-bottom: 16px;
+}
+
+/* line 35, src/scss/_components/homepage/_sticky.scss */
+.sticky__box-wrapper > div {
+  padding-bottom: 16px;
+}
+
+/* line 40, src/scss/_components/homepage/_sticky.scss */
+.sticky__box-left {
+  width: 64px;
+  padding-right: 8px;
+}
+
+/* line 45, src/scss/_components/homepage/_sticky.scss */
+.sticky__box-right {
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  min-width: 1px;
+  max-width: 100%;
+  min-height: 68px;
+  padding: 12px 6px 12px 16px;
+  -webkit-border-radius: 4px;
+          border-radius: 4px;
+  background-color: #F8F8F8;
+  -webkit-box-shadow: 0px 2px 4px rgba(56, 64, 71, 0);
+          box-shadow: 0px 2px 4px rgba(56, 64, 71, 0);
+  -webkit-transition: -webkit-box-shadow 0.4s ease-in-out;
+  transition: -webkit-box-shadow 0.4s ease-in-out;
+  -o-transition: box-shadow 0.4s ease-in-out;
+  transition: box-shadow 0.4s ease-in-out;
+  transition: box-shadow 0.4s ease-in-out, -webkit-box-shadow 0.4s ease-in-out;
+}
+
+/* line 57, src/scss/_components/homepage/_sticky.scss */
+.sticky__box-img {
+  overflow: hidden;
+  position: relative;
+  width: 56px;
+  height: 68px;
+  -webkit-border-radius: 4px;
+          border-radius: 4px;
+}
+
+/* line 69, src/scss/_components/homepage/_sticky.scss */
+.sticky__box-header {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
+  padding-bottom: 5px;
+}
+
+/* line 76, src/scss/_components/homepage/_sticky.scss */
+.sticky__box-header > div:nth-of-type(2) {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  padding-left: 4px;
+  padding-right: 4px;
+}
+
+/* line 81, src/scss/_components/homepage/_sticky.scss */
+.sticky__box-header > div:nth-of-type(3) {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+/* line 86, src/scss/_components/homepage/_sticky.scss */
+.sticky__box-header > div i {
+  margin-right: 4px;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 18px;
+  color: #6F757B;
+}
+
+/* line 96, src/scss/_components/homepage/_sticky.scss */
+.sticky__box-name {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1;
+  letter-spacing: 0.2px;
+  color: #6F757B;
+}
+
+/* line 104, src/scss/_components/homepage/_sticky.scss */
+.sticky__box-badge {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 4px;
+  -webkit-border-radius: 2px;
+          border-radius: 2px;
+  background-color: #EBF7F8;
+}
+
+/* line 112, src/scss/_components/homepage/_sticky.scss */
+.sticky__box-badge p {
+  font-weight: 500;
+  font-size: 13px;
+  line-height: 15px;
+  color: #3BB3BD;
+}
+
+/* line 120, src/scss/_components/homepage/_sticky.scss */
+.sticky__box-info {
+  font-size: 14px;
+  line-height: 18px;
+  letter-spacing: 0.2px;
+  color: #AEB5BC;
+}
+
+/* line 128, src/scss/_components/homepage/_sticky.scss */
+.sticky__btn {
+  width: 100%;
+  padding-bottom: 12px;
+}
+
+/* line 132, src/scss/_components/homepage/_sticky.scss */
+.sticky__btn .c-btn {
+  width: 100%;
+}
+
+/* line 137, src/scss/_components/homepage/_sticky.scss */
+.sticky__info {
+  padding-bottom: 24px;
+  text-align: center;
+  font-size: 14px;
+  line-height: 22px;
+  letter-spacing: 0.2px;
+  color: #AEB5BC;
+}
+
+/* line 146, src/scss/_components/homepage/_sticky.scss */
+.sticky__line {
+  width: 100%;
+  height: 1px;
+  margin-bottom: 24px;
+  background-color: #F2F2F2;
+}
+
+/* line 153, src/scss/_components/homepage/_sticky.scss */
+.sticky__action {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+/* line 157, src/scss/_components/homepage/_sticky.scss */
+.sticky__action > img {
+  display: block;
+  max-width: 140px;
+  height: auto;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 /*# sourceMappingURL=maps/app.css.map */
