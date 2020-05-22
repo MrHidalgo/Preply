@@ -1,7 +1,96 @@
 // FOOTER :: START
 
 footer#footer.footer
-	.c-grid
-		.footer__wrapper
+
+	.footer__row.footer__row-1
+		.c-grid
+			.footer__wrapper.footer__wrapper-1
+				.footer__col.footer__col-1
+
+					p.footer__title Support
+					p.footer__desc Need any help?
+					a.footer__link.footer__link--email(href="mailto:support@preply.com")
+						i.icon-font.icon-mail
+						span support@preply.com
+
+				.footer__col.footer__col-2
+
+					p.footer__title Contacts
+					p.footer__subtitle
+						img(src="img/usa.png" srcset='img/usa@2x.png 2x' alt="")
+						span Preply USA
+					p.footer__desc!= "167 Corey Rd., Suite 206,<br>Brighton, MA 02135"
+
+				.footer__col.footer__col-3
+
+					p.footer__title Preply social
+
+					ul.social
+						li.social__item
+							a.social__link.social__link--facebook(href="#")
+								span
+									i.icon-font.icon-facebook
+								p Facebook
+						li.social__item
+							a.social__link.social__link--vk(href="#")
+								span
+									i.icon-font.icon-vk
+								p VK
+						li.social__item
+							a.social__link.social__link--youtube(href="#")
+								span
+									i.icon-font.icon-play
+								p YouTube
+
+				.footer__col.footer__col-4
+
+					p.footer__title Our rating is 4.82 / 5
+
+					ul.rating
+						li.rating__item
+							a.rating__star(href="#")
+								+iconSVG('star')
+						li.rating__item
+							a.rating__star(href="#")
+								+iconSVG('star')
+						li.rating__item
+							a.rating__star(href="#")
+								+iconSVG('star')
+						li.rating__item
+							a.rating__star(href="#")
+								+iconSVG('star')
+						li.rating__item
+							a.rating__star.rating__star--half(href="#")
+								+iconSVG('star')
+								+iconSVG('half-star')
+
+
+					p.footer__desc!= "Based on 56,762 reviews<br>Leave a review"
+
+
+	.footer__row.footer__row-2
+		.c-grid
+			.footer__wrapper.footer__wrapper-2
+				.footer__col.footer__col-1
+
+					.copyright
+						p.copyright__text © 2012–2019 Preply Inc.
+
+				.footer__col.footer__col-2
+
+					ul.footer__nav
+						li.footer__nav-list
+							a.footer__nav-link(href="#") Terms of Service
+						li.footer__nav-list
+							span.footer__nav-dot ·
+						li.footer__nav-list
+							a.footer__nav-link(href="#") Privacy Policy
+						li.footer__nav-list
+							span.footer__nav-dot ·
+						li.footer__nav-list
+							a.footer__nav-link(href="#") Refund Policy
+
+				.footer__col.footer__col-3
+				.footer__col.footer__col-4
 
 // FOOTER :: END
