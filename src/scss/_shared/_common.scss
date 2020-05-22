@@ -16,6 +16,27 @@
 		display: flex;
 		align-items: center;
 
+		&:hover {
+			span {
+				background-color: #ffffff;
+				@include transition(background-color);
+			}
+
+			.icon-font {
+				&.icon {
+					&-facebook {
+						color: #fff;
+						@include transition(color);
+					}
+				}
+			}
+
+			p {
+				color: #ffffff;
+				@include transition(color);
+			}
+		}
+
 		&.social__link--facebook {
 			span {
 				background-color: transparent;
@@ -28,8 +49,9 @@
 			justify-content: center;
 			width: 14px;
 			height: 14px;
-			background-color: #E0E2E3;
 			border-radius: 1px;
+			background-color: #E0E2E3;
+			@include transition(background-color);
 		}
 
 		.icon-font {
@@ -37,11 +59,16 @@
 				&-facebook {
 					color: #e0e2e3;
 					font-size: 14px;
+					@include transition(color);
 				}
 				&-vk,
 				&-play {
 					color: #384047;
 					font-size: 6px;
+				}
+				&-play {
+					position: relative;
+					left: 1px;
 				}
 			}
 		}
@@ -51,6 +78,7 @@
 			font-size: 13px;
 			line-height: 21px;
 			color: #E0E2E3;
+			@include transition(color);
 		}
 	}
 }

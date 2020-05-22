@@ -90,12 +90,19 @@
 		&-dot {
 			margin-left: 5px;
 			margin-right: 5px;
+			color: #E0E2E3;
 		}
 
 		&-link {
 			font-size: 10.7px;
 			line-height: 13px;
 			color: #E0E2E3;
+			@include transition(color);
+
+			&:hover {
+				color: #ffffff;
+				@include transition(color);
+			}
 		}
 	}
 }
