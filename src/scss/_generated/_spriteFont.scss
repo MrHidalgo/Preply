@@ -27,20 +27,26 @@
 @function icon-char($filename) {
 	$char: "";
 
-	@if $filename == facebook {
+	@if $filename == checked {
 		$char: "\E001";
 	}
-	@if $filename == flash {
+	@if $filename == close {
 		$char: "\E002";
 	}
-	@if $filename == mail {
+	@if $filename == facebook {
 		$char: "\E003";
 	}
-	@if $filename == play {
+	@if $filename == flash {
 		$char: "\E004";
 	}
-	@if $filename == vk {
+	@if $filename == mail {
 		$char: "\E005";
+	}
+	@if $filename == play {
+		$char: "\E006";
+	}
+	@if $filename == vk {
+		$char: "\E007";
 	}
 
 	@return $char;
@@ -57,6 +63,14 @@
 	}
 }
 
+.icon-checked {
+	@include icon(checked);
+
+}
+.icon-close {
+	@include icon(close);
+
+}
 .icon-facebook {
 	@include icon(facebook);
 
