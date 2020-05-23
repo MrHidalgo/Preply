@@ -1457,8 +1457,8 @@ picture {
 }
 
 /* line 95, src/scss/_components/homepage/_details.scss */
-.details__heading span,
-.details__heading p {
+.details__heading i,
+.details__heading span {
   font-weight: 700;
   font-size: 28px;
   line-height: 36px;
@@ -1467,8 +1467,8 @@ picture {
 
 @media screen and (max-width: 767px) {
   /* line 95, src/scss/_components/homepage/_details.scss */
-  .details__heading span,
-  .details__heading p {
+  .details__heading i,
+  .details__heading span {
     display: inline;
     font-size: 20px;
     line-height: 30px;
@@ -1476,7 +1476,7 @@ picture {
 }
 
 /* line 108, src/scss/_components/homepage/_details.scss */
-.details__heading span {
+.details__heading i {
   padding-right: 5px;
   color: #3BB3BD;
 }
