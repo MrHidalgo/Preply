@@ -4,6 +4,9 @@
 	position: sticky;
 	top: 80px;
 	right: 0;
+	@include adaptive(767) {
+		display: none;
+	}
 
 	&__title {
 		padding-bottom: 24px;

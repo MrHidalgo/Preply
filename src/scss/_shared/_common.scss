@@ -126,6 +126,9 @@
 
 .copyright {
 	display: flex;
+	@include adaptive(767) {
+		padding-bottom: 6px;
+	}
 
 	&__text {
 		font-weight: 500;

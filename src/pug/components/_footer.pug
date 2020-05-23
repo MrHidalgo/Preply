@@ -44,28 +44,31 @@ footer#footer.footer
 
 				.footer__col.footer__col-4
 
-					p.footer__title Our rating is 4.82 / 5
+					div
+						p.footer__title Our rating is 4.82 / 5
 
-					ul.rating
-						li.rating__item
-							p.rating__star
-								+iconSVG('star')
-						li.rating__item
-							p.rating__star
-								+iconSVG('star')
-						li.rating__item
-							p.rating__star
-								+iconSVG('star')
-						li.rating__item
-							p.rating__star
-								+iconSVG('star')
-						li.rating__item
-							p.rating__star.rating__star--half
-								+iconSVG('star')
-								+iconSVG('half-star')
+						ul.rating
+							li.rating__item
+								p.rating__star
+									+iconSVG('star')
+							li.rating__item
+								p.rating__star
+									+iconSVG('star')
+							li.rating__item
+								p.rating__star
+									+iconSVG('star')
+							li.rating__item
+								p.rating__star
+									+iconSVG('star')
+							li.rating__item
+								p.rating__star.rating__star--half
+									+iconSVG('star')
+									+iconSVG('half-star')
 
+					div
+						p.footer__desc!= "Based on 56,762 reviews<br>Leave a review"
 
-					p.footer__desc!= "Based on 56,762 reviews<br>Leave a review"
+						img(src="img/img-like.jpg" alt="")
 
 
 	.footer__row.footer__row-2

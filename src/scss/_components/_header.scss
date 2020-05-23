@@ -8,6 +8,9 @@
 	width: 100%;
 	background-color: rgba(#ffffff, 0.95);
 	@include transition(box-shadow);
+	@include adaptive(767) {
+		background-color: #ffffff;
+	}
 
 	&.header--fixed {
 		box-shadow: 0 2px 5px 0 rgba($c-black, 0.15);
@@ -19,6 +22,9 @@
 		align-items: center;
 		justify-content: space-between;
 		height: 70px;
+		@include adaptive(767) {
+			height: 64px;
+		}
 	}
 }
 

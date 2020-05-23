@@ -5,6 +5,10 @@
 	position: relative;
 	padding-top: 32px;
 	padding-bottom: 142px;
+	@include adaptive(767) {
+		padding-top: 64px;
+		padding-bottom: 42px;
+	}
 
 	&__bg {
 		position: absolute;
@@ -13,6 +17,9 @@
 		width: 100%;
 		height: calc(50% - 75px);
 		background-color: #3BB3BD;
+		@include adaptive(767) {
+			height: calc(100% - 75px);
+		}
 
 		&:before {
 			content: '';
@@ -30,6 +37,9 @@
 		z-index: 2;
 		position: relative;
 		padding-top: 96px;
+		@include adaptive(767) {
+			padding-top: 0;
+		}
 	}
 
 	&__subtitle {
@@ -42,6 +52,9 @@
 		line-height: 26px;
 		text-align: center;
 		color: #384047;
+		@include adaptive(767) {
+			display: none;
+		}
 	}
 
 	&__title {
@@ -52,6 +65,11 @@
 		text-align: center;
 		letter-spacing: 0.2px;
 		color: #FFFFFF;
+		@include adaptive(767) {
+			padding-bottom: 16px;
+			font-size: 28px;
+			line-height: 42px;
+		}
 	}
 
 	&__desc {
@@ -64,6 +82,10 @@
 		line-height: 24px;
 		text-align: center;
 		color: #F2F2F2;
+		@include adaptive(767) {
+			padding-bottom: 40px;
+			max-width: 319px;
+		}
 	}
 
 	&__btn {
@@ -72,6 +94,10 @@
 
 		.c-btn {
 			min-width: 280px;
+			@include adaptive(767) {
+				min-width: unset;
+				width: 100%;
+			}
 		}
 	}
 
@@ -91,6 +117,9 @@
 		flex-direction: column;
 		border-radius: 12px;
 		box-shadow: 0px 12px 24px rgba(56, 64, 71, 0.12);
+		@include adaptive(767) {
+			display: none;
+		}
 
 		&-bg {
 			z-index: 0;

@@ -10,6 +10,10 @@
 			padding-top: 39px;
 			padding-bottom: 46px;
 			background-color: #384047;
+			@include adaptive(767) {
+				padding-top: 16px;
+				padding-bottom: 16px;
+			}
 		}
 		&-2 {
 			background-color: #32393f;
@@ -25,11 +29,54 @@
 			padding-right: 0;
 		}
 
+		&-1 {
+			@include adaptive(767) {
+				.footer__col {
+					&-1,
+					&-2,
+					&-3 {
+						display: none;
+					}
+
+					&-4 {
+						.footer__title {
+							padding-bottom: 0;
+						}
+
+						> div {
+							display: flex;
+							align-items: center;
+							justify-content: space-between;
+							padding-bottom: 10px;
+
+							img {
+								display: block;
+								max-width: 100%;
+								height: auto;
+							}
+						}
+					}
+				}
+			}
+		}
+
 		&-2 {
 			align-items: center;
 			min-height: 97px;
+			@include adaptive(767) {
+				flex-direction: column;
+				align-items: flex-start;
+				min-height: unset;
+				padding-top: 32px;
+				padding-bottom: 12px;
+			}
 
 			.footer__col {
+				@include adaptive(767) {
+					width: 100%;
+					max-width: 100% !important;
+				}
+
 				&-2 {
 					max-width: calc((100% / 4) * 2);
 				}
@@ -43,7 +90,15 @@
 	&__col {
 		width: 100%;
 		max-width: calc(100% / 4);
+		@include adaptive(767) {
+			max-width: 100%;
+		}
 
+		&-4 {
+			img {
+				display: none;
+			}
+		}
 	}
 
 	&__title {

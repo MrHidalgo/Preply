@@ -3,6 +3,9 @@
 .details {
 	padding-top: 32px;
 	padding-bottom: 36px;
+	@include adaptive(767) {
+		padding-top: 40px;
+	}
 
 	&__wrapper {
 		display: flex;
@@ -35,6 +38,21 @@
 		font-size: 42px;
 		line-height: 58px;
 		color: #384047;
+		@include adaptive(767) {
+			padding-bottom: 16px;
+			font-size: 24px;
+			line-height: 36px;
+			text-align: center;
+		}
+
+		&-1 {
+			br {
+				display: none;
+				@include adaptive(767) {
+					display: block;
+				}
+			}
+		}
 
 		&-2 {
 			padding-bottom: 28px;
@@ -43,6 +61,10 @@
 		&--sub {
 			font-size: 28px;
 			line-height: 42px;
+			@include adaptive(767) {
+				font-size: 20px;
+				line-height: 32px;
+			}
 		}
 
 		span {
@@ -53,6 +75,10 @@
 			background-color: #E0F4F5;
 			border-radius: 4px;
 			color: #3BB3BD;
+			@include adaptive(767) {
+				padding-left: 5px;
+				padding-right: 5px;
+			}
 		}
 	}
 
@@ -61,10 +87,23 @@
 		align-items: center;
 		flex-wrap: wrap;
 		padding-bottom: 24px;
-		font-weight: 700;
-		font-size: 28px;
-		line-height: 36px;
-		color: #384047;
+		@include adaptive(767) {
+			display: block;
+			font-size: 0;
+		}
+
+		span,
+		p {
+			font-weight: 700;
+			font-size: 28px;
+			line-height: 36px;
+			color: #384047;
+			@include adaptive(767) {
+				display: inline;
+				font-size: 20px;
+				line-height: 30px;
+			}
+		}
 
 		span {
 			padding-right: 5px;
@@ -80,6 +119,10 @@
 		color: #384047;
 		@include adaptive(1023) {
 			max-width: 100%;
+		}
+		@include adaptive(767) {
+			font-size: 16px;
+			line-height: 26px;
 		}
 
 		&-1,
@@ -110,6 +153,12 @@
 			padding-bottom: 64px;
 		}
 
+		&-1 {
+			@include adaptive(767) {
+				text-align: center;
+			}
+		}
+
 		i {
 			font-style: italic;
 		}
@@ -119,11 +168,22 @@
 		display: flex;
 		align-items: center;
 		padding-bottom: 48px;
+		@include adaptive(767) {
+			flex-direction: column;
+			padding-bottom: 40px;
+		}
 
 		&.details__view--light {
 			padding-bottom: 0;
+			@include adaptive(767) {
+				width: 100%;
+			}
 
 			.details__view-right {
+				@include adaptive(767) {
+					width: 100%;
+				}
+
 				p,
 				span {
 					color: #ffffff;
@@ -131,8 +191,26 @@
 			}
 		}
 
+		&-left,
+		&-right {
+			@include adaptive(767) {
+				width: 100%;
+
+				.c-btn {
+					width: 100%;
+				}
+			}
+		}
+
 		&-right {
 			padding-left: 24px;
+			@include adaptive(767) {
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				padding-left: 0;
+				padding-top: 16px;
+			}
 
 			p,
 			span {
@@ -144,6 +222,9 @@
 
 			p {
 				color: #3BB3BD;
+				@include adaptive(767) {
+					padding-right: 4px;
+				}
 			}
 
 			span {
@@ -168,6 +249,13 @@
 			min-width: 1px;
 			max-width: 100%;
 			padding: 32px 40px 40px;
+			@include adaptive(767) {
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+				text-align: center;
+				padding: 32px 24px;
+			}
 		}
 
 		&-right {
@@ -176,6 +264,9 @@
 			width: 100%;
 			max-width: 189px;
 			min-height: 100%;
+			@include adaptive(767) {
+				display: none;
+			}
 
 			img {
 				@extend %imageResCoverAbs;
@@ -210,6 +301,10 @@
 		margin-bottom: 40px;
 		border-radius: 8px;
 		transform: translateZ(0);
+		@include adaptive(767) {
+			height: 196px;
+			margin-bottom: 32px;
+		}
 
 		img {
 			@extend %imageResCoverAbs;
@@ -219,11 +314,21 @@
 	&__info {
 		display: flex;
 		flex-direction: column;
-		height: 176px;
+		min-height: 176px;
 		padding: 32px 40px;
 		margin-bottom: 32px;
 		background-color: #E0F4F5;
 		border-radius: 8px;
+		@include adaptive(767) {
+			padding: 24px;
+		}
+
+		span,
+		p {
+			@include adaptive(767) {
+				text-align: center;
+			}
+		}
 
 		span {
 			padding-bottom: 16px;
@@ -237,6 +342,10 @@
 			font-size: 28px;
 			line-height: 36px;
 			color: #384047;
+			@include adaptive(767) {
+				font-size: 20px;
+				line-height: 30px;
+			}
 		}
 	}
 
@@ -245,6 +354,9 @@
 		flex-direction: column;
 		padding-bottom: 24px;
 		padding-left: 27px;
+		@include adaptive(767) {
+			padding-left: 19px;
+		}
 
 		li {
 			display: flex;
@@ -288,7 +400,8 @@
 	&__visual {
 		overflow: hidden;
 		position: relative;
-		width: 414px;
+		width: 100%;
+		max-width: 414px;
 		height: 240px;
 		margin-bottom: 64px;
 		border-radius: 8px;
