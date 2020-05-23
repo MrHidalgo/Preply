@@ -6,16 +6,26 @@
 
 	&__wrapper {
 		display: flex;
+		@include adaptive(1023) {
+			flex-wrap: wrap;
+		}
 
 		&-left {
 			flex: 1;
 			min-width: 1px;
 			max-width: 100%;
 			padding-right: 96px;
+			@include adaptive(1023) {
+				padding-right: 0;
+				padding-bottom: 30px;
+			}
 		}
 
 		&-right {
 			width: 276px;
+			@include adaptive(1023) {
+				width: 100%;
+			}
 		}
 	}
 
@@ -68,6 +78,9 @@
 		font-size: 16px;
 		line-height: 26px;
 		color: #384047;
+		@include adaptive(1023) {
+			max-width: 100%;
+		}
 
 		&-1,
 		&-12 {

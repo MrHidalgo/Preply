@@ -132,18 +132,33 @@
 					display: flex;
 					justify-content: flex-end;
 					padding-right: 40px;
+					@include adaptive(1023) {
+						padding-right: 15px;
+					}
 				}
 				&-2 {
 					padding-left: 25px;
 					padding-right: 25px;
+					@include adaptive(1023) {
+						padding-left: 15px;
+						padding-right: 15px;
+					}
 				}
 				&-3 {
 					padding-left: 40px;
 					padding-right: 35px;
+					@include adaptive(1023) {
+						padding-left: 15px;
+						padding-right: 15px;
+					}
 				}
 				&-4 {
 					padding-left: 35px;
 					padding-right: 40px;
+					@include adaptive(1023) {
+						padding-left: 15px;
+						padding-right: 15px;
+					}
 				}
 			}
 		}

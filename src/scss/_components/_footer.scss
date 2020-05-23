@@ -20,16 +20,30 @@
 		display: flex;
 		padding-left: 31px;
 		padding-right: 31px;
+		@include adaptive(1023) {
+			padding-left: 0;
+			padding-right: 0;
+		}
 
 		&-2 {
 			align-items: center;
 			min-height: 97px;
+
+			.footer__col {
+				&-2 {
+					max-width: calc((100% / 4) * 2);
+				}
+				&-4 {
+					display: none;
+				}
+			}
 		}
 	}
 
 	&__col {
 		width: 100%;
 		max-width: calc(100% / 4);
+
 	}
 
 	&__title {
