@@ -68,7 +68,7 @@
 					box-shadow: 0px 2px 4px rgba(56, 64, 71, 0.16);
 					transition: box-shadow 0.2s ease;
 					@include adaptive(767) {
-						box-shadow: 0px 6px 8px rgba(56, 64, 71, 0.12);
+						box-shadow: none;
 					}
 				}
 			}
@@ -131,7 +131,8 @@
 				background-color: transparent;
 			}
 
-			svg {
+			svg,
+			img {
 				display: block;
 				max-width: 100%;
 				height: auto;
