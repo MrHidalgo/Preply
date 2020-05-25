@@ -1130,7 +1130,16 @@ picture {
   transition: transform 0.2s ease, -webkit-transform 0.2s ease;
 }
 
-/* line 64, src/scss/_components/homepage/_language.scss */
+@media screen and (max-width: 767px) {
+  /* line 59, src/scss/_components/homepage/_language.scss */
+  .language__box:hover {
+    -webkit-transform: translateY(0);
+        -ms-transform: translateY(0);
+            transform: translateY(0);
+  }
+}
+
+/* line 67, src/scss/_components/homepage/_language.scss */
 .language__box:hover .language__box-flag {
   -webkit-box-shadow: 0px 2px 4px rgba(56, 64, 71, 0.16);
           box-shadow: 0px 2px 4px rgba(56, 64, 71, 0.16);
@@ -1141,21 +1150,21 @@ picture {
   transition: box-shadow 0.2s ease, -webkit-box-shadow 0.2s ease;
 }
 
-/* line 69, src/scss/_components/homepage/_language.scss */
-.language__box:hover .language__box-content {
-  color: #222;
-  -webkit-transition: color 0.4s ease-in-out;
-  -o-transition: color 0.4s ease-in-out;
-  transition: color 0.4s ease-in-out;
+@media screen and (max-width: 767px) {
+  /* line 67, src/scss/_components/homepage/_language.scss */
+  .language__box:hover .language__box-flag {
+    -webkit-box-shadow: 0px 6px 8px rgba(56, 64, 71, 0.12);
+            box-shadow: 0px 6px 8px rgba(56, 64, 71, 0.12);
+  }
 }
 
-/* line 78, src/scss/_components/homepage/_language.scss */
+/* line 79, src/scss/_components/homepage/_language.scss */
 .language__box.language__box--more .language__box-flag {
   border-color: #3BB3BD;
   background-color: #3bb3bd;
 }
 
-/* line 85, src/scss/_components/homepage/_language.scss */
+/* line 86, src/scss/_components/homepage/_language.scss */
 .language__box-wrapper {
   display: -webkit-box;
   display: -webkit-flex;
@@ -1168,7 +1177,7 @@ picture {
 }
 
 @media screen and (max-width: 767px) {
-  /* line 85, src/scss/_components/homepage/_language.scss */
+  /* line 86, src/scss/_components/homepage/_language.scss */
   .language__box-wrapper {
     overflow: hidden;
     overflow-x: auto;
@@ -1181,25 +1190,25 @@ picture {
   }
 }
 
-/* line 98, src/scss/_components/homepage/_language.scss */
+/* line 99, src/scss/_components/homepage/_language.scss */
 .language__box-wrapper > div {
   padding-right: 47px;
 }
 
 @media screen and (max-width: 767px) {
-  /* line 98, src/scss/_components/homepage/_language.scss */
+  /* line 99, src/scss/_components/homepage/_language.scss */
   .language__box-wrapper > div {
     display: inline-block;
     vertical-align: top;
     padding-right: 10px;
   }
-  /* line 105, src/scss/_components/homepage/_language.scss */
+  /* line 106, src/scss/_components/homepage/_language.scss */
   .language__box-wrapper > div:last-of-type {
     padding-right: 16px;
   }
 }
 
-/* line 112, src/scss/_components/homepage/_language.scss */
+/* line 113, src/scss/_components/homepage/_language.scss */
 .language__box-flag {
   overflow: hidden;
   position: relative;
@@ -1231,7 +1240,7 @@ picture {
 }
 
 @media screen and (max-width: 767px) {
-  /* line 112, src/scss/_components/homepage/_language.scss */
+  /* line 113, src/scss/_components/homepage/_language.scss */
   .language__box-flag {
     width: 19px;
     height: 12px;
@@ -1242,7 +1251,7 @@ picture {
   }
 }
 
-/* line 133, src/scss/_components/homepage/_language.scss */
+/* line 134, src/scss/_components/homepage/_language.scss */
 .language__box-flag svg {
   display: block;
   max-width: 100%;
@@ -1253,14 +1262,14 @@ picture {
 }
 
 @media screen and (max-width: 767px) {
-  /* line 133, src/scss/_components/homepage/_language.scss */
+  /* line 134, src/scss/_components/homepage/_language.scss */
   .language__box-flag svg {
     -webkit-border-radius: 1px;
             border-radius: 1px;
   }
 }
 
-/* line 146, src/scss/_components/homepage/_language.scss */
+/* line 147, src/scss/_components/homepage/_language.scss */
 .language__box-content {
   padding-top: 12px;
   font-weight: 500;
@@ -1268,13 +1277,10 @@ picture {
   line-height: 26px;
   text-align: center;
   color: #6F757B;
-  -webkit-transition: color 0.4s ease-in-out;
-  -o-transition: color 0.4s ease-in-out;
-  transition: color 0.4s ease-in-out;
 }
 
 @media screen and (max-width: 767px) {
-  /* line 146, src/scss/_components/homepage/_language.scss */
+  /* line 147, src/scss/_components/homepage/_language.scss */
   .language__box-content {
     padding-top: 0;
     padding-left: 8px;
