@@ -615,64 +615,34 @@ picture {
           justify-content: center;
   padding-left: 35px;
   padding-right: 35px;
-  -webkit-box-shadow: none;
-          box-shadow: none;
+  -webkit-box-shadow: 0px 2px 4px rgba(56, 64, 71, 0);
+          box-shadow: 0px 2px 4px rgba(56, 64, 71, 0);
   border: none;
   -webkit-border-radius: 2px;
           border-radius: 2px;
-  -webkit-transition: all 0.75s cubic-bezier(0, 0.9, 0.5, 1);
-  -o-transition: all 0.75s cubic-bezier(0, 0.9, 0.5, 1);
-  transition: all 0.75s cubic-bezier(0, 0.9, 0.5, 1);
+  -webkit-transition: background-color 0.2s ease, -webkit-transform 0.2s ease, -webkit-box-shadow 0.2s ease;
+  transition: background-color 0.2s ease, -webkit-transform 0.2s ease, -webkit-box-shadow 0.2s ease;
+  -o-transition: background-color 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
+  transition: background-color 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
+  transition: background-color 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease, -webkit-transform 0.2s ease, -webkit-box-shadow 0.2s ease;
 }
 
 /* line 18, src/scss/_macros/_btn.scss */
 .c-btn:hover, .c-btn:active {
-  -webkit-transition: all 0.75s cubic-bezier(0, 0.9, 0.5, 1);
-  -o-transition: all 0.75s cubic-bezier(0, 0.9, 0.5, 1);
-  transition: all 0.75s cubic-bezier(0, 0.9, 0.5, 1);
+  -webkit-transform: translateY(-1px);
+      -ms-transform: translateY(-1px);
+          transform: translateY(-1px);
+  -webkit-box-shadow: 0px 2px 4px rgba(56, 64, 71, 0.16);
+          box-shadow: 0px 2px 4px rgba(56, 64, 71, 0.16);
+  background-color: #36A4AD;
+  -webkit-transition: background-color 0.2s ease, -webkit-transform 0.2s ease, -webkit-box-shadow 0.2s ease;
+  transition: background-color 0.2s ease, -webkit-transform 0.2s ease, -webkit-box-shadow 0.2s ease;
+  -o-transition: background-color 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
+  transition: background-color 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
+  transition: background-color 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease, -webkit-transform 0.2s ease, -webkit-box-shadow 0.2s ease;
 }
 
-/* line 22, src/scss/_macros/_btn.scss */
-.c-btn:hover:after, .c-btn:active:after {
-  opacity: 1;
-  visibility: visible;
-  -webkit-transform: translateX(-50%) translateY(-50%) scale(1);
-      -ms-transform: translateX(-50%) translateY(-50%) scale(1);
-          transform: translateX(-50%) translateY(-50%) scale(1);
-  -webkit-transition: all 0.75s cubic-bezier(0, 0.9, 0.5, 1);
-  -o-transition: all 0.75s cubic-bezier(0, 0.9, 0.5, 1);
-  transition: all 0.75s cubic-bezier(0, 0.9, 0.5, 1);
-}
-
-/* line 30, src/scss/_macros/_btn.scss */
-.c-btn:after {
-  content: '';
-  z-index: 0;
-  opacity: 0;
-  visibility: hidden;
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  width: -webkit-calc(100% + 30px);
-  width: calc(100% + 30px);
-  -webkit-border-radius: 50%;
-          border-radius: 50%;
-  padding: -webkit-calc(40% + 30px) 0;
-  padding: calc(40% + 30px) 0;
-  -webkit-transform: translateX(-50%) translateY(-50%) scale(0);
-      -ms-transform: translateX(-50%) translateY(-50%) scale(0);
-          transform: translateX(-50%) translateY(-50%) scale(0);
-  -webkit-backface-visibility: hidden;
-          backface-visibility: hidden;
-  -webkit-transform-origin: center;
-      -ms-transform-origin: center;
-          transform-origin: center;
-  -webkit-transition: all 0.75s cubic-bezier(0, 0.9, 0.5, 1);
-  -o-transition: all 0.75s cubic-bezier(0, 0.9, 0.5, 1);
-  transition: all 0.75s cubic-bezier(0, 0.9, 0.5, 1);
-}
-
-/* line 47, src/scss/_macros/_btn.scss */
+/* line 26, src/scss/_macros/_btn.scss */
 .c-btn span {
   z-index: 2;
   position: relative;
@@ -680,7 +650,7 @@ picture {
   text-align: center;
 }
 
-/* line 54, src/scss/_macros/_btn.scss */
+/* line 33, src/scss/_macros/_btn.scss */
 .c-btn__wrapper {
   display: -webkit-box;
   display: -webkit-flex;
@@ -692,54 +662,49 @@ picture {
           align-items: center;
 }
 
-/* line 59, src/scss/_macros/_btn.scss */
+/* line 38, src/scss/_macros/_btn.scss */
 .c-btn--small {
   height: 40px;
 }
 
-/* line 62, src/scss/_macros/_btn.scss */
+/* line 41, src/scss/_macros/_btn.scss */
 .c-btn--small span {
   font-size: 14px;
   line-height: 20px;
 }
 
-/* line 68, src/scss/_macros/_btn.scss */
+/* line 47, src/scss/_macros/_btn.scss */
 .c-btn--big {
   height: 48px;
 }
 
-/* line 71, src/scss/_macros/_btn.scss */
+/* line 50, src/scss/_macros/_btn.scss */
 .c-btn--big span {
   font-size: 16px;
   line-height: 22px;
 }
 
-/* line 77, src/scss/_macros/_btn.scss */
+/* line 56, src/scss/_macros/_btn.scss */
 .c-btn__primary {
   background-color: #3bb3bd;
 }
 
-/* line 80, src/scss/_macros/_btn.scss */
-.c-btn__primary:after {
-  background-color: #35a1aa;
-}
-
-/* line 84, src/scss/_macros/_btn.scss */
+/* line 59, src/scss/_macros/_btn.scss */
 .c-btn__primary span {
   color: #FFFFFF;
 }
 
-/* line 89, src/scss/_macros/_btn.scss */
+/* line 64, src/scss/_macros/_btn.scss */
 .c-btn__secondary {
   background-color: #FFFFFF;
 }
 
-/* line 92, src/scss/_macros/_btn.scss */
-.c-btn__secondary:after {
-  background-color: #f7f7f7;
+/* line 67, src/scss/_macros/_btn.scss */
+.c-btn__secondary:hover {
+  background-color: #ffffff;
 }
 
-/* line 96, src/scss/_macros/_btn.scss */
+/* line 71, src/scss/_macros/_btn.scss */
 .c-btn__secondary span {
   color: #3bb3bd;
 }
@@ -1129,6 +1094,11 @@ picture {
   -webkit-align-items: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-transition: -webkit-transform 0.2s ease;
+  transition: -webkit-transform 0.2s ease;
+  -o-transition: transform 0.2s ease;
+  transition: transform 0.2s ease;
+  transition: transform 0.2s ease, -webkit-transform 0.2s ease;
 }
 
 @media screen and (max-width: 767px) {
@@ -1148,18 +1118,30 @@ picture {
   }
 }
 
-/* line 60, src/scss/_components/homepage/_language.scss */
-.language__box:hover .language__box-flag {
-  -webkit-box-shadow: 0px 3px 4px rgba(56, 64, 71, 0.2);
-          box-shadow: 0px 3px 4px rgba(56, 64, 71, 0.2);
-  -webkit-transition: -webkit-box-shadow 0.4s ease-in-out;
-  transition: -webkit-box-shadow 0.4s ease-in-out;
-  -o-transition: box-shadow 0.4s ease-in-out;
-  transition: box-shadow 0.4s ease-in-out;
-  transition: box-shadow 0.4s ease-in-out, -webkit-box-shadow 0.4s ease-in-out;
+/* line 59, src/scss/_components/homepage/_language.scss */
+.language__box:hover {
+  -webkit-transform: translateY(-1px);
+      -ms-transform: translateY(-1px);
+          transform: translateY(-1px);
+  -webkit-transition: -webkit-transform 0.2s ease;
+  transition: -webkit-transform 0.2s ease;
+  -o-transition: transform 0.2s ease;
+  transition: transform 0.2s ease;
+  transition: transform 0.2s ease, -webkit-transform 0.2s ease;
 }
 
-/* line 65, src/scss/_components/homepage/_language.scss */
+/* line 64, src/scss/_components/homepage/_language.scss */
+.language__box:hover .language__box-flag {
+  -webkit-box-shadow: 0px 2px 4px rgba(56, 64, 71, 0.16);
+          box-shadow: 0px 2px 4px rgba(56, 64, 71, 0.16);
+  -webkit-transition: -webkit-box-shadow 0.2s ease;
+  transition: -webkit-box-shadow 0.2s ease;
+  -o-transition: box-shadow 0.2s ease;
+  transition: box-shadow 0.2s ease;
+  transition: box-shadow 0.2s ease, -webkit-box-shadow 0.2s ease;
+}
+
+/* line 69, src/scss/_components/homepage/_language.scss */
 .language__box:hover .language__box-content {
   color: #222;
   -webkit-transition: color 0.4s ease-in-out;
@@ -1167,13 +1149,13 @@ picture {
   transition: color 0.4s ease-in-out;
 }
 
-/* line 74, src/scss/_components/homepage/_language.scss */
+/* line 78, src/scss/_components/homepage/_language.scss */
 .language__box.language__box--more .language__box-flag {
   border-color: #3BB3BD;
   background-color: #3bb3bd;
 }
 
-/* line 81, src/scss/_components/homepage/_language.scss */
+/* line 85, src/scss/_components/homepage/_language.scss */
 .language__box-wrapper {
   display: -webkit-box;
   display: -webkit-flex;
@@ -1186,7 +1168,7 @@ picture {
 }
 
 @media screen and (max-width: 767px) {
-  /* line 81, src/scss/_components/homepage/_language.scss */
+  /* line 85, src/scss/_components/homepage/_language.scss */
   .language__box-wrapper {
     overflow: hidden;
     overflow-x: auto;
@@ -1199,25 +1181,25 @@ picture {
   }
 }
 
-/* line 94, src/scss/_components/homepage/_language.scss */
+/* line 98, src/scss/_components/homepage/_language.scss */
 .language__box-wrapper > div {
   padding-right: 47px;
 }
 
 @media screen and (max-width: 767px) {
-  /* line 94, src/scss/_components/homepage/_language.scss */
+  /* line 98, src/scss/_components/homepage/_language.scss */
   .language__box-wrapper > div {
     display: inline-block;
     vertical-align: top;
     padding-right: 10px;
   }
-  /* line 101, src/scss/_components/homepage/_language.scss */
+  /* line 105, src/scss/_components/homepage/_language.scss */
   .language__box-wrapper > div:last-of-type {
     padding-right: 16px;
   }
 }
 
-/* line 108, src/scss/_components/homepage/_language.scss */
+/* line 112, src/scss/_components/homepage/_language.scss */
 .language__box-flag {
   overflow: hidden;
   position: relative;
@@ -1241,15 +1223,15 @@ picture {
   background-color: #C4C4C4;
   -webkit-box-shadow: 0px 6px 8px rgba(56, 64, 71, 0.12);
           box-shadow: 0px 6px 8px rgba(56, 64, 71, 0.12);
-  -webkit-transition: -webkit-box-shadow 0.4s ease-in-out;
-  transition: -webkit-box-shadow 0.4s ease-in-out;
-  -o-transition: box-shadow 0.4s ease-in-out;
-  transition: box-shadow 0.4s ease-in-out;
-  transition: box-shadow 0.4s ease-in-out, -webkit-box-shadow 0.4s ease-in-out;
+  -webkit-transition: -webkit-box-shadow 0.2s ease;
+  transition: -webkit-box-shadow 0.2s ease;
+  -o-transition: box-shadow 0.2s ease;
+  transition: box-shadow 0.2s ease;
+  transition: box-shadow 0.2s ease, -webkit-box-shadow 0.2s ease;
 }
 
 @media screen and (max-width: 767px) {
-  /* line 108, src/scss/_components/homepage/_language.scss */
+  /* line 112, src/scss/_components/homepage/_language.scss */
   .language__box-flag {
     width: 19px;
     height: 12px;
@@ -1260,7 +1242,7 @@ picture {
   }
 }
 
-/* line 129, src/scss/_components/homepage/_language.scss */
+/* line 133, src/scss/_components/homepage/_language.scss */
 .language__box-flag svg {
   display: block;
   max-width: 100%;
@@ -1271,14 +1253,14 @@ picture {
 }
 
 @media screen and (max-width: 767px) {
-  /* line 129, src/scss/_components/homepage/_language.scss */
+  /* line 133, src/scss/_components/homepage/_language.scss */
   .language__box-flag svg {
     -webkit-border-radius: 1px;
             border-radius: 1px;
   }
 }
 
-/* line 142, src/scss/_components/homepage/_language.scss */
+/* line 146, src/scss/_components/homepage/_language.scss */
 .language__box-content {
   padding-top: 12px;
   font-weight: 500;
@@ -1292,7 +1274,7 @@ picture {
 }
 
 @media screen and (max-width: 767px) {
-  /* line 142, src/scss/_components/homepage/_language.scss */
+  /* line 146, src/scss/_components/homepage/_language.scss */
   .language__box-content {
     padding-top: 0;
     padding-left: 8px;
@@ -1912,11 +1894,84 @@ picture {
   background-color: #F2F2F2;
 }
 
+@media screen and (max-width: 1023px) {
+  /* line 412, src/scss/_components/homepage/_details.scss */
+  .details__content-7 {
+    display: none;
+  }
+}
+
+/* line 419, src/scss/_components/homepage/_details.scss */
+.details__trustpilot {
+  position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 32px 40px 40px;
+  margin-bottom: 64px;
+  -webkit-border-radius: 8px;
+          border-radius: 8px;
+  background-color: #E0F4F5;
+}
+
+@media screen and (max-width: 767px) {
+  /* line 419, src/scss/_components/homepage/_details.scss */
+  .details__trustpilot {
+    padding: 32px 24px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  /* line 431, src/scss/_components/homepage/_details.scss */
+  .details__trustpilot-title, .details__trustpilot-desc {
+    text-align: center;
+  }
+}
+
+/* line 438, src/scss/_components/homepage/_details.scss */
+.details__trustpilot-title {
+  padding-bottom: 16px;
+  font-weight: bold;
+  font-size: 28px;
+  line-height: 36px;
+  color: #384047;
+}
+
+@media screen and (max-width: 767px) {
+  /* line 438, src/scss/_components/homepage/_details.scss */
+  .details__trustpilot-title {
+    font-size: 20px;
+    line-height: 30px;
+  }
+}
+
+/* line 450, src/scss/_components/homepage/_details.scss */
+.details__trustpilot-desc {
+  padding-bottom: 40px;
+  font-size: 16px;
+  line-height: 26px;
+  color: #384047;
+}
+
+/* line 457, src/scss/_components/homepage/_details.scss */
+.details__trustpilot-wrapper {
+  padding: 10px;
+  -webkit-border-radius: 8px;
+          border-radius: 8px;
+  background-color: #ffffff;
+}
+
 /* line 3, src/scss/_components/homepage/_sticky.scss */
 .sticky {
   position: -webkit-sticky;
   position: sticky;
-  top: 80px;
+  top: 96px;
   right: 0;
 }
 
@@ -2124,42 +2179,12 @@ picture {
 
 /* line 140, src/scss/_components/homepage/_sticky.scss */
 .sticky__info {
-  padding-bottom: 24px;
+  padding-bottom: 15px;
   text-align: center;
   font-size: 14px;
   line-height: 22px;
   letter-spacing: 0.2px;
   color: #AEB5BC;
-}
-
-/* line 149, src/scss/_components/homepage/_sticky.scss */
-.sticky__line {
-  width: 100%;
-  height: 1px;
-  margin-bottom: 24px;
-  background-color: #F2F2F2;
-}
-
-/* line 156, src/scss/_components/homepage/_sticky.scss */
-.sticky__action {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -webkit-flex-direction: column;
-      -ms-flex-direction: column;
-          flex-direction: column;
-}
-
-/* line 160, src/scss/_components/homepage/_sticky.scss */
-.sticky__action > img {
-  display: block;
-  max-width: 140px;
-  height: auto;
-  margin-left: auto;
-  margin-right: auto;
 }
 
 /* line 3, src/scss/_components/homepage/_tutor.scss */
@@ -2174,7 +2199,7 @@ picture {
   /* line 3, src/scss/_components/homepage/_tutor.scss */
   .tutor {
     padding-top: 64px;
-    padding-bottom: 42px;
+    padding-bottom: 64px;
   }
 }
 
