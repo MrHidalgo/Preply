@@ -406,6 +406,10 @@
 		margin-bottom: 64px;
 		border-radius: 8px;
 		background-color: #F2F2F2;
+
+		img {
+			@extend %imageResCoverAbs;
+		}
 	}
 
 	&__content {

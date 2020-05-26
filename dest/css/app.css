@@ -1,6 +1,6 @@
 @charset "UTF-8";
 /* line 14, src/scss/_utilities/_extend.scss */
-.details__poster-right img, .details__image img, .sticky__box-img img {
+.details__poster-right img, .details__image img, .details__visual img, .sticky__box-img img {
   position: absolute;
   top: 0;
   left: 0;
@@ -1903,13 +1903,13 @@ picture {
 }
 
 @media screen and (max-width: 1023px) {
-  /* line 412, src/scss/_components/homepage/_details.scss */
+  /* line 416, src/scss/_components/homepage/_details.scss */
   .details__content-7 {
     display: none;
   }
 }
 
-/* line 419, src/scss/_components/homepage/_details.scss */
+/* line 423, src/scss/_components/homepage/_details.scss */
 .details__trustpilot {
   position: relative;
   display: -webkit-box;
@@ -1929,20 +1929,20 @@ picture {
 }
 
 @media screen and (max-width: 767px) {
-  /* line 419, src/scss/_components/homepage/_details.scss */
+  /* line 423, src/scss/_components/homepage/_details.scss */
   .details__trustpilot {
     padding: 32px 24px;
   }
 }
 
 @media screen and (max-width: 767px) {
-  /* line 431, src/scss/_components/homepage/_details.scss */
+  /* line 435, src/scss/_components/homepage/_details.scss */
   .details__trustpilot-title, .details__trustpilot-desc {
     text-align: center;
   }
 }
 
-/* line 438, src/scss/_components/homepage/_details.scss */
+/* line 442, src/scss/_components/homepage/_details.scss */
 .details__trustpilot-title {
   padding-bottom: 16px;
   font-weight: bold;
@@ -1952,14 +1952,14 @@ picture {
 }
 
 @media screen and (max-width: 767px) {
-  /* line 438, src/scss/_components/homepage/_details.scss */
+  /* line 442, src/scss/_components/homepage/_details.scss */
   .details__trustpilot-title {
     font-size: 20px;
     line-height: 30px;
   }
 }
 
-/* line 450, src/scss/_components/homepage/_details.scss */
+/* line 454, src/scss/_components/homepage/_details.scss */
 .details__trustpilot-desc {
   padding-bottom: 40px;
   font-size: 16px;
@@ -1967,7 +1967,7 @@ picture {
   color: #384047;
 }
 
-/* line 457, src/scss/_components/homepage/_details.scss */
+/* line 461, src/scss/_components/homepage/_details.scss */
 .details__trustpilot-wrapper {
   padding: 10px;
   -webkit-border-radius: 8px;
