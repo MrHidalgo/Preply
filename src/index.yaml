@@ -4,3 +4,6 @@ PageList:
 - file: index.html
   titleName: Home
   ready: 100
+- file: main.html
+  titleName: Main
+  ready: 1

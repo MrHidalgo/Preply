@@ -1,0 +1,60 @@
+// SECTION :: START
+
+.benefits {
+	padding-top: 96px;
+	padding-bottom: 96px;
+
+	&__wrapper {
+		display: flex;
+		justify-content: center;
+
+		> div {
+			&:nth-of-type(2) {
+				padding-left: 64px;
+				padding-right: 64px;
+			}
+		}
+	}
+
+	&__box {
+		display: flex;
+		align-items: center;
+		flex-direction: column;
+		width: 100%;
+		max-width: 320px;
+
+		&-head {
+			img {
+				display: block;
+				max-width: 100%;
+				height: auto;
+				margin-left: auto;
+				margin-right: auto;
+			}
+		}
+
+		&-body {
+			padding-top: 30px;
+		}
+
+		p {
+			padding-bottom: 15px;
+			font-weight: 500;
+			font-size: 20px;
+			line-height: 24px;
+			text-align: center;
+			letter-spacing: -0.075px;
+			color: #384047;
+		}
+
+		span {
+			display: block;
+			font-size: 16px;
+			line-height: 24px;
+			text-align: center;
+			color: #6F757B;
+		}
+	}
+}
+
+// SECTION :: END

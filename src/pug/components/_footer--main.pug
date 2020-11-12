@@ -1,0 +1,73 @@
+// FOOTER :: START
+
+footer#footer.footer
+
+	.footer__row.footer__row-1
+		.c-grid
+			.footer__wrapper.footer__wrapper-1
+				.footer__col.footer__col-1
+
+					p.footer__title Support
+					p.footer__desc Need any help?
+					a.footer__link.footer__link--email(href="mailto:support@preply.com")
+						i.icon-font.icon-mail
+						span support@preply.com
+
+				.footer__col.footer__col-2
+
+					p.footer__title Contacts
+					p.footer__subtitle
+						img(src="img/usa.png" srcset='img/usa@2x.png 2x' alt="")
+						span USA
+					p.footer__desc!= "1371 Beacon Street, Suite 301, Brookline, MA, <br>02446"
+
+				.footer__col.footer__col-3
+
+					p.footer__title Preply social
+
+					ul.social
+						li.social__item
+							a.social__link.social__link--facebook(href="https://www.facebook.com/preplycompany")
+								span
+									i.icon-font.icon-facebook
+								p Facebook
+						li.social__item
+							a.social__link.social__link--vk(href="#")
+								span
+									i.icon-font.icon-vk
+								p VK
+						li.social__item
+							a.social__link.social__link--youtube(href="https://www.youtube.com/user/preplysite")
+								span
+									i.icon-font.icon-play
+								p YouTube
+
+				.footer__col.footer__col-4
+
+					div
+						p.footer__title Review
+
+						ul.rating
+							li.rating__item
+								p.rating__star
+									+iconSVG('star')
+							li.rating__item
+								p.rating__star
+									+iconSVG('star')
+							li.rating__item
+								p.rating__star
+									+iconSVG('star')
+							li.rating__item
+								p.rating__star
+									+iconSVG('star')
+							li.rating__item
+								p.rating__star.rating__star--half
+									+iconSVG('star')
+									+iconSVG('half-star')
+
+					div
+						p.footer__desc!= "Based on 56,762 reviews<br>Leave a review"
+
+						img(src="img/img-like.jpg" alt="")
+
+// FOOTER :: END

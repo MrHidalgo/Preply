@@ -39,14 +39,20 @@
 	@if $filename == flash {
 		$char: "\E004";
 	}
-	@if $filename == mail {
+	@if $filename == login {
 		$char: "\E005";
 	}
-	@if $filename == play {
+	@if $filename == mail {
 		$char: "\E006";
 	}
-	@if $filename == vk {
+	@if $filename == play {
 		$char: "\E007";
+	}
+	@if $filename == quote {
+		$char: "\E008";
+	}
+	@if $filename == vk {
+		$char: "\E009";
 	}
 
 	@return $char;
@@ -79,12 +85,20 @@
 	@include icon(flash);
 
 }
+.icon-login {
+	@include icon(login);
+
+}
 .icon-mail {
 	@include icon(mail);
 
 }
 .icon-play {
 	@include icon(play);
+
+}
+.icon-quote {
+	@include icon(quote);
 
 }
 .icon-vk {

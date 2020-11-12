@@ -1,0 +1,14 @@
+---
+title: Preply
+
+pageClassName: p-home
+---
+extends shared/_layout-main
+
+block footer
+block content
+	div.body.body--start(class!= pageClassName)
+
+		include components/main/_benefits
+		include components/main/_reviews
+		include components/main/_paid

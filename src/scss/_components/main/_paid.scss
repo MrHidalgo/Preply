@@ -1,0 +1,61 @@
+// SECTION :: START
+
+.paid {
+	position: relative;
+	padding-top: 102px;
+	padding-bottom: 96px;
+
+	&__bg {
+		z-index: 0;
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		background-image: url('../img/img-paid.jpeg');
+		background-repeat: no-repeat;
+		background-position: center;
+		background-size: cover;
+		transform: matrix(-1, 0, 0, 1, 0, 0);
+	}
+
+	&:after {
+		content: '';
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		background: linear-gradient(90deg, rgba(17, 17, 17, 0.88) 9.27%, rgba(0, 0, 0, 0) 63.19%);
+	}
+
+	&__wrapper {
+		z-index: 2;
+		position: relative;
+		display: flex;
+
+		> div {
+			width: 100%;
+			max-width: 380px;
+		}
+	}
+
+	&__title {
+		padding-bottom: 15px;
+		font-weight: bold;
+		font-size: 40px;
+		line-height: 48px;
+		letter-spacing: -0.2px;
+		color: #FFFFFF;
+	}
+
+	&__desc {
+		padding-bottom: 30px;
+		font-size: 20px;
+		line-height: 28px;
+		letter-spacing: -0.2px;
+		color: rgba(255, 255, 255, 0.8);
+	}
+}
+
+// SECTION :: END

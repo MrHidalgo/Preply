@@ -1,0 +1,58 @@
+// SECTION :: START
+
+.reviews {
+	padding-top: 96px;
+	padding-bottom: 96px;
+
+	&__wrapper {
+		display: flex;
+		align-items: center;
+
+		&-left,
+		&-right {
+			width: 50%;
+		}
+
+		&-left {
+			overflow: hidden;
+			position: relative;
+			height: 546px;
+
+			img {
+				@extend %imageResCoverAbs;
+			}
+		}
+
+		&-right {
+			padding-left: 128px;
+
+			.icon-font {
+				margin-bottom: 40px;
+				color: rgba(#3bb3bd, 0.15);
+				font-size: 38px;
+			}
+		}
+	}
+
+	&__title {
+		padding-bottom: 30px;
+		font-size: 28px;
+		line-height: 40px;
+		color: #000000;
+	}
+
+	&__desc {
+		width: 100%;
+		max-width: 240px;
+		padding-bottom: 30px;
+		font-size: 16px;
+		line-height: 22px;
+		color: #384047;
+
+		span {
+			font-weight: 500;
+		}
+	}
+}
+
+// SECTION :: END
