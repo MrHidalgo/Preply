@@ -7,6 +7,9 @@
 	@include adaptive(1023) {
 		padding-top: 374px;
 	}
+	@include adaptive(767) {
+		padding-top: 255px;
+	}
 
 	&__bg {
 		z-index: 0;
@@ -24,7 +27,7 @@
 			background-image: url('../img/img-main--tablet.jpg');
 		}
 		@include adaptive(767) {
-			height: 516px;
+			height: 351px;
 			background-image: url('../img/img-main--mobile.jpg');
 		}
 	}
@@ -38,6 +41,10 @@
 		@include adaptive(1023) {
 			align-items: center;
 			flex-direction: column;
+		}
+		@include adaptive(767) {
+			padding-left: 15px;
+			padding-right: 15px;
 		}
 	}
 
@@ -73,6 +80,9 @@
 				margin-right: auto;
 			}
 		}
+		@include adaptive(767) {
+			padding: 20px;
+		}
 	}
 
 	&__title {
@@ -84,6 +94,11 @@
 		color: #384047;
 		@include adaptive(1023) {
 			color: #ffffff;
+		}
+		@include adaptive(767) {
+			padding-bottom: 10px;
+			font-size: 36px;
+			line-height: 36px;
 		}
 	}
 
@@ -97,6 +112,10 @@
 			color: rgba(255, 255, 255, 0.8);
 			text-align: center;
 		}
+		@include adaptive(767) {
+			padding-bottom: 20px;
+			line-height: 20px;
+		}
 	}
 
 	&__form {
@@ -106,9 +125,15 @@
 		&-field {
 			width: 100%;
 			padding-bottom: 16px;
+			@include adaptive(767) {
+				padding-bottom: 12px;
+			}
 
 			&--button {
 				padding-top: 8px;
+				@include adaptive(767) {
+					padding-top: 4px;
+				}
 			}
 		}
 
@@ -129,6 +154,13 @@
 				line-height: 20px;
 				color: #AEB5BC;
 			}
+			@include adaptive(767) {
+				height: 48px;
+				font-size: 16px;
+				@include inputPlaceholder {
+					font-size: 16px;
+				}
+			}
 		}
 
 		.c-btn {
@@ -146,6 +178,10 @@
 		align-items: center;
 		padding-top: 12px;
 		padding-bottom: 28px;
+		@include adaptive(767) {
+			padding-top: 8px;
+			padding-bottom: 20px;
+		}
 
 		p {
 			padding-left: 17px;
@@ -153,6 +189,11 @@
 			font-size: 16px;
 			line-height: 20px;
 			color: #6F757B;
+			@include adaptive(767) {
+				font-size: 14px;
+				padding-left: 10px;
+				padding-right: 10px;
+			}
 		}
 
 		span {
@@ -167,11 +208,17 @@
 	&__btn {
 		justify-content: space-between;
 		padding-bottom: 32px;
+		@include adaptive(767) {
+			padding-bottom: 20px;
+		}
 
 		.c-btn {
 			width: 100%;
 			max-width: calc((100% - 20px) / 2);
 			border: 1px solid #DADFE1;
+			@include adaptive(767) {
+				max-width: calc((100% - 10px) / 2);
+			}
 
 			img {
 				display: block;
@@ -192,6 +239,16 @@
 		letter-spacing: 0;
 		text-align: center;
 		color: #8a959e;
+		@include adaptive(767) {
+			width: 100%;
+			max-width: 240px;
+			margin-left: auto;
+			margin-right: auto;
+
+			br {
+				display: none;
+			}
+		}
 
 		a {
 			font-weight: 500;

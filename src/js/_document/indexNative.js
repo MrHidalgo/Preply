@@ -54,6 +54,7 @@
 
 		// lib
 		initPopups();
+		initHamburger();
 		// ==========================================
 
 		// callback

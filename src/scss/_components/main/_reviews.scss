@@ -1,11 +1,27 @@
 // SECTION :: START
 
 .reviews {
+	position: relative;
 	padding-top: 96px;
 	padding-bottom: 96px;
 	@include adaptive(1023) {
 		padding-top: 80px;
 		padding-bottom: 80px;
+	}
+	@include adaptive(767) {
+		padding-top: 0;
+		padding-bottom: 56px;
+
+		&:before {
+			content: '';
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 180px;
+			border-radius: 0 0 4px 4px;
+			background-color: #EDEFF0;
+		}
 	}
 
 	&__wrapper {
@@ -33,6 +49,10 @@
 			@include adaptive(1023) {
 				height: 458px;
 				margin-bottom: 45px;
+			}
+			@include adaptive(767) {
+				height: 343px;
+				margin-bottom: 30px;
 			}
 
 			img {
@@ -63,6 +83,13 @@
 		font-size: 28px;
 		line-height: 40px;
 		color: #000000;
+		@include adaptive(767) {
+			display: flex;
+			align-items: flex-start;
+			padding-bottom: 12px;
+			font-size: 20px;
+			line-height: 28px;
+		}
 
 		span {
 			@include adaptive(1023) {
@@ -73,6 +100,11 @@
 				margin-right: auto;
 				text-align: center;
 			}
+			@include adaptive(767) {
+				max-width: 100%;
+				text-align: left;
+				padding-left: 20px;
+			}
 		}
 
 		.icon-font {
@@ -80,6 +112,11 @@
 			position: absolute;
 			@include adaptive(1023) {
 				display: flex;
+			}
+			@include adaptive(767) {
+				position: relative;
+				margin-bottom: 0;
+				font-size: 35px;
 			}
 
 			&:nth-of-type(1) {
@@ -90,6 +127,9 @@
 				bottom: 0;
 				right: 0;
 				transform: scale(-1);
+				@include adaptive(767) {
+					display: none;
+				}
 			}
 		}
 	}
@@ -106,6 +146,11 @@
 			margin-left: auto;
 			margin-right: auto;
 		}
+		@include adaptive(767) {
+			padding-left: 65px;
+			text-align: left;
+			max-width: unset;
+		}
 
 		span {
 			font-weight: 500;
@@ -113,6 +158,10 @@
 	}
 
 	.c-btn {
+		@include adaptive(767) {
+			width: 100%;
+		}
+
 		&__wrapper {
 			@include adaptive(1023) {
 				justify-content: center;

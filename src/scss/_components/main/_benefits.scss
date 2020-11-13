@@ -6,6 +6,10 @@
 	@include adaptive(1023) {
 		padding-top: 40px;
 	}
+	@include adaptive(767) {
+		padding-top: 16px;
+		padding-bottom: 56px;
+	}
 
 	&__wrapper {
 		display: flex;
@@ -13,6 +17,10 @@
 		@include adaptive(1023) {
 			align-items: center;
 			flex-direction: column;
+		}
+		@include adaptive(767) {
+			padding-left: 10px;
+			padding-right: 10px;
 		}
 
 		> div {
@@ -42,6 +50,9 @@
 			@include adaptive(1023) {
 				width: 77px;
 				padding-right: 30px;
+			}
+			@include adaptive(767) {
+				width: 70px;
 			}
 
 			img {
@@ -74,6 +85,10 @@
 			@include adaptive(1023) {
 				padding-bottom: 10px;
 				text-align: left;
+			}
+			@include adaptive(767) {
+				font-size: 18px;
+				line-height: 20px;
 			}
 		}
 
