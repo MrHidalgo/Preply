@@ -20,13 +20,13 @@
 		justify-content: space-between;
 		height: 70px;
 		padding-left: 30px;
-		padding-right: 30px;
+		padding-right: 33px;
 		@include adaptive(767) {
 			height: 64px;
 		}
 
 		&-left {
-			padding-right: 24px;
+			padding-right: 26px;
 		}
 
 		&-right {
@@ -36,7 +36,6 @@
 			flex: 1;
 			min-width: 1px;
 			max-width: 100%;
-			padding-left: 24px;
 
 			&:before {
 				content: '';
@@ -59,7 +58,7 @@
 					flex: 1;
 					min-width: 1px;
 					max-width: 100%;
-					padding-left: 24px;
+					padding-left: 25px;
 
 					&:after {
 						content: '';
@@ -74,7 +73,7 @@
 				}
 
 				&:nth-of-type(2) {
-					padding-left: 24px;
+					padding-left: 27px;
 				}
 			}
 		}
@@ -102,6 +101,90 @@
 		}
 	}
 
+	&__dropdown {
+		opacity: 0;
+		visibility: hidden;
+		transform: translateY(5px);
+		position: absolute;
+		top: 100%;
+		right: 0;
+		display: flex;
+		flex-direction: column;
+		min-width: 170px;
+		padding: 12px;
+		border-radius: 0 0 4px 4px;
+		box-shadow: 0 0 10px rgba(0, 0, 0, 0.12);
+		background-color: #ffffff;
+		@include transition(opacity, visibility, transform);
+
+		&.is-open {
+			opacity: 1;
+			visibility: visible;
+			transform: translateY(0);
+			@include transition(opacity, visibility, transform);
+		}
+
+		> div {
+			&:not(:last-of-type) {
+				margin-bottom: 16px;
+			}
+		}
+
+		&-wrapper {
+			position: relative;
+			display: flex;
+			padding-right: 24px;
+		}
+
+		&-toggle {
+			display: flex;
+			align-items: center;
+			height: 70px;
+
+			span {
+				font-size: 14px;
+				line-height: 20px;
+				color: #384047;
+
+				i,
+				u {
+					text-decoration: none;
+					font-style: normal;
+				}
+			}
+
+			.icon-font {
+				margin-left: 6px;
+				color: #384047;
+				font-size: 6px;
+			}
+		}
+
+		select {
+			outline: none;
+			position: relative;
+			display: block;
+			width: 100%;
+			max-width: 100%;
+			height: 38px;
+			padding: 0 30px 0 12px;
+			border: 1px solid #dadfe1;
+			box-shadow: none;
+			border-radius: 4px;
+			background-color: #fff;
+			color: #384047;
+			font-size: 14px;
+			font-weight: 400;
+			line-height: 1.4;
+		}
+
+		&-title {
+			padding-bottom: 5px;
+			color: #6f757b;
+			font-size: 13px;
+		}
+	}
+
 	&__ques {
 		position: relative;
 		display: flex;
@@ -117,7 +200,7 @@
 	&__login {
 		display: flex;
 		align-items: center;
-		margin-left: 24px;
+		margin-left: 29px;
 
 		&:hover {
 			.icon-font,

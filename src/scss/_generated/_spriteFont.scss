@@ -27,35 +27,38 @@
 @function icon-char($filename) {
 	$char: "";
 
-	@if $filename == checked {
+	@if $filename == arrow {
 		$char: "\E001";
 	}
-	@if $filename == close {
+	@if $filename == checked {
 		$char: "\E002";
 	}
-	@if $filename == facebook {
+	@if $filename == close {
 		$char: "\E003";
 	}
-	@if $filename == flash {
+	@if $filename == facebook {
 		$char: "\E004";
 	}
-	@if $filename == login {
+	@if $filename == flash {
 		$char: "\E005";
 	}
-	@if $filename == mail {
+	@if $filename == login {
 		$char: "\E006";
 	}
-	@if $filename == paperclip {
+	@if $filename == mail {
 		$char: "\E007";
 	}
-	@if $filename == play {
+	@if $filename == paperclip {
 		$char: "\E008";
 	}
-	@if $filename == quote {
+	@if $filename == play {
 		$char: "\E009";
 	}
-	@if $filename == vk {
+	@if $filename == quote {
 		$char: "\E00A";
+	}
+	@if $filename == vk {
+		$char: "\E00B";
 	}
 
 	@return $char;
@@ -72,6 +75,10 @@
 	}
 }
 
+.icon-arrow {
+	@include icon(arrow);
+
+}
 .icon-checked {
 	@include icon(checked);
 

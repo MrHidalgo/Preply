@@ -22,14 +22,40 @@
  */
 var initHeaderFixed = function initHeaderFixed() {
 
-	var countScroll = $(window).scrollTop(),
-	    headerElement = $('.header');
+  var countScroll = $(window).scrollTop(),
+      headerElement = $('.header');
 
-	if (countScroll > 10) {
-		headerElement.addClass("header--fixed");
-	} else {
-		headerElement.removeClass("header--fixed");
-	}
+  if (countScroll > 10) {
+    headerElement.addClass("header--fixed");
+  } else {
+    headerElement.removeClass("header--fixed");
+  }
+};
+
+/**
+ * @name initPopups
+ *
+ * @description
+ */
+var initPopups = function initPopups() {
+
+  $('[popup-js]').magnificPopup({
+    type: 'inline',
+    fixedContentPos: true,
+    fixedBgPos: true,
+    overflowY: 'auto',
+    closeBtnInside: true,
+    preloader: false,
+    midClick: true,
+    removalDelay: 300,
+    mainClass: 'is-show',
+    callbacks: {
+      beforeOpen: function beforeOpen() {
+        this.st.mainClass = this.st.el.attr('data-effect');
+      },
+      close: function close() {}
+    }
+  });
 };
 
 /**
@@ -39,23 +65,23 @@ var initHeaderFixed = function initHeaderFixed() {
  */
 var initPreventBehavior = function initPreventBehavior() {
 
-	var link = document.querySelectorAll("a");
+  var link = document.querySelectorAll("a");
 
-	link.forEach(function (val, idx) {
+  link.forEach(function (val, idx) {
 
-		val.addEventListener("click", function (e) {
-			if (val.getAttribute("href") === "#") {
-				e.preventDefault();
-			}
-		});
-	});
+    val.addEventListener("click", function (e) {
+      if (val.getAttribute("href") === "#") {
+        e.preventDefault();
+      }
+    });
+  });
 };
 
 /**
  * @description Window on load.
  */
 window.addEventListener('load', function (ev) {
-	initHeaderFixed();
+  initHeaderFixed();
 });
 
 /**
@@ -67,55 +93,69 @@ window.addEventListener('resize', function (ev) {});
  * @description Window on scroll.
  */
 window.addEventListener('scroll', function (ev) {
-	initHeaderFixed();
+  initHeaderFixed();
 });
 
 /**
  * @description Document DOM ready.
  */
 (function () {
-	/*
- * =============================================
- * CALLBACK :: start
- * ============================================= */
-	var collapseToggle = function collapseToggle() {
-		$('[collapse-toggle-js]').on('click', function (ev) {
-			var el = $(ev.currentTarget),
-			    elParent = el.closest('[collapse-parent-js]'),
-			    elBody = elParent.find('[collapse-body-js]');
+  /*
+  * =============================================
+  * CALLBACK :: start
+  * ============================================= */
+  var dropdownToggle = function dropdownToggle() {
+    $('body').on('click', function (e) {
+      var className = "[dropdown-parent-js]";
 
-			if (el.hasClass('is-active')) {
-				el.removeClass('is-active');
-				elBody.slideUp(300);
-			} else {
-				$('[collapse-toggle-js]').removeClass('is-active');
-				$('[collapse-body-js]').slideUp(300);
+      if (!$(e.target).closest(className).length) {
+        $('[dropdown-js]').removeClass('is-open');
+      }
+    });
 
-				el.addClass('is-active');
-				elBody.slideDown(300);
-			}
-		});
-	};
-	/*
- * CALLBACK :: end
- * ============================================= */
+    $('[dropdown-lang-js]').on('change', function (ev) {
+      var el = $(ev.currentTarget),
+          selectedVal = el.find('option:selected').text();
 
-	/**
-  * @name initNative
-  *
-  * @description Init all method
-  */
-	var initNative = function initNative() {
-		// default
-		initPreventBehavior();
-		// ==========================================
+      $('[dropdown-toggle-js]').find('span i').text(selectedVal);
+    });
 
-		// lib
-		// ==========================================
+    $('[dropdown-currency-js]').on('change', function (ev) {
+      var el = $(ev.currentTarget),
+          selectedVal = el.find('option:selected').text();
 
-		// callback
-		collapseToggle();
-		// ==========================================
-	};
-	initNative();
+      $('[dropdown-toggle-js]').find('span u').text(selectedVal);
+    });
+
+    $('[dropdown-toggle-js]').on('click', function (ev) {
+      var el = $(ev.currentTarget),
+          elParent = el.closest('[dropdown-parent-js]'),
+          elBody = elParent.find('[dropdown-js]');
+
+      elBody.toggleClass('is-open');
+    });
+  };
+  /*
+  * CALLBACK :: end
+  * ============================================= */
+
+  /**
+   * @name initNative
+   *
+   * @description Init all method
+   */
+  var initNative = function initNative() {
+    // default
+    initPreventBehavior();
+    // ==========================================
+
+    // lib
+    initPopups();
+    // ==========================================
+
+    // callback
+    dropdownToggle();
+    // ==========================================
+  };
+  initNative();
 })();

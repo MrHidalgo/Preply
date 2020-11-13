@@ -6,22 +6,35 @@
 	* =============================================
 	* CALLBACK :: start
 	* ============================================= */
-	const collapseToggle = () => {
-		$('[collapse-toggle-js]').on('click', (ev) => {
-			const el = $(ev.currentTarget),
-				elParent = el.closest('[collapse-parent-js]'),
-				elBody = elParent.find('[collapse-body-js]');
+	const dropdownToggle = () => {
+		$('body').on('click', function (e) {
+			const className = "[dropdown-parent-js]";
 
-			if(el.hasClass('is-active')) {
-				el.removeClass('is-active');
-				elBody.slideUp(300);
-			} else {
-				$('[collapse-toggle-js]').removeClass('is-active');
-				$('[collapse-body-js]').slideUp(300);
-
-				el.addClass('is-active');
-				elBody.slideDown(300);
+			if (!$(e.target).closest(className).length) {
+				$('[dropdown-js]').removeClass('is-open');
 			}
+		});
+
+		$('[dropdown-lang-js]').on('change', (ev) => {
+			const el = $(ev.currentTarget),
+				selectedVal = el.find('option:selected').text();
+
+			$('[dropdown-toggle-js]').find('span i').text(selectedVal);
+		});
+
+		$('[dropdown-currency-js]').on('change', (ev) => {
+			const el = $(ev.currentTarget),
+				selectedVal = el.find('option:selected').text();
+
+			$('[dropdown-toggle-js]').find('span u').text(selectedVal);
+		});
+
+		$('[dropdown-toggle-js]').on('click', (ev) => {
+			const el = $(ev.currentTarget),
+				elParent = el.closest('[dropdown-parent-js]'),
+				elBody = elParent.find('[dropdown-js]');
+
+			elBody.toggleClass('is-open');
 		});
 	};
 	/*
@@ -40,10 +53,11 @@
 		// ==========================================
 
 		// lib
+		initPopups();
 		// ==========================================
 
 		// callback
-		collapseToggle();
+		dropdownToggle();
 		// ==========================================
 	};
 	initNative();

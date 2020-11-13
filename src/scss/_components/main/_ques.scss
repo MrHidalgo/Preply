@@ -5,6 +5,10 @@
 	padding-bottom: 96px;
 	border-radius: 4px;
 	background-color: #EDEFF0;
+	@include adaptive(1023) {
+		padding-top: 80px;
+		padding-bottom: 80px;
+	}
 
 	&__title {
 		padding-bottom: 72px;
@@ -18,6 +22,9 @@
 
 	&__collapse {
 		padding-bottom: 64px;
+		@include adaptive(1023) {
+			padding-bottom: 45px;
+		}
 
 		&-wrapper {
 			display: flex;
@@ -26,15 +33,28 @@
 			max-width: 945px;
 			margin-left: auto;
 			margin-right: auto;
+			@include adaptive(1023) {
+				flex-direction: column;
+				align-items: center;
+			}
 
 			> div {
 				width: 50%;
+				@include adaptive(1023) {
+					width: 60%;
+				}
 
 				&:nth-of-type(odd) {
 					padding-right: 30px;
+					@include adaptive(1023) {
+						padding-right: 0;
+					}
 				}
 				&:nth-of-type(even) {
 					padding-left: 30px;
+					@include adaptive(1023) {
+						padding-left: 0;
+					}
 				}
 			}
 		}
@@ -100,24 +120,6 @@
 					flex: 1;
 					min-width: 1px;
 					max-width: 100%;
-				}
-			}
-		}
-
-		&-body {
-			display: none;
-
-			> div {
-				padding-top: 30px;
-			}
-
-			p {
-				font-size: 16px;
-				line-height: 24px;
-				color: #6F757B;
-
-				& + p {
-					padding-top: 15px;
 				}
 			}
 		}

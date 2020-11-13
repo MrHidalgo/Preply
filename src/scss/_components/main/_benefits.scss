@@ -3,15 +3,25 @@
 .benefits {
 	padding-top: 96px;
 	padding-bottom: 96px;
+	@include adaptive(1023) {
+		padding-top: 40px;
+	}
 
 	&__wrapper {
 		display: flex;
 		justify-content: center;
+		@include adaptive(1023) {
+			align-items: center;
+			flex-direction: column;
+		}
 
 		> div {
 			&:nth-of-type(2) {
-				padding-left: 64px;
-				padding-right: 64px;
+				padding-left: 70px;
+				padding-right: 70px;
+				@include adaptive(1023) {
+					padding: 40px 0;
+				}
 			}
 		}
 	}
@@ -22,8 +32,18 @@
 		flex-direction: column;
 		width: 100%;
 		max-width: 320px;
+		@include adaptive(1023) {
+			flex-direction: row;
+			align-items: flex-start;
+			max-width: 375px;
+		}
 
 		&-head {
+			@include adaptive(1023) {
+				width: 77px;
+				padding-right: 30px;
+			}
+
 			img {
 				display: block;
 				max-width: 100%;
@@ -35,16 +55,26 @@
 
 		&-body {
 			padding-top: 30px;
+			@include adaptive(1023) {
+				flex: 1;
+				min-width: 1px;
+				max-width: 100%;
+				padding-top: 0;
+			}
 		}
 
 		p {
-			padding-bottom: 15px;
+			padding-bottom: 17px;
 			font-weight: 500;
 			font-size: 20px;
 			line-height: 24px;
 			text-align: center;
 			letter-spacing: -0.075px;
 			color: #384047;
+			@include adaptive(1023) {
+				padding-bottom: 10px;
+				text-align: left;
+			}
 		}
 
 		span {
@@ -53,6 +83,9 @@
 			line-height: 24px;
 			text-align: center;
 			color: #6F757B;
+			@include adaptive(1023) {
+				text-align: left;
+			}
 		}
 	}
 }

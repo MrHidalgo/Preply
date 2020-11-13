@@ -6,6 +6,92 @@ pageClassName: p-home
 extends shared/_layout-main
 
 block footer
+block modal
+	mixin modalContent1()
+		.c-modal__header
+			p What kind of tutors does Preply look for?
+		.c-modal__body
+			p No specific certification or teaching experience is required! We welcome English tutors who:
+			ul
+				li
+					span Enjoy sharing knowledge and making a difference in students’ lives
+				li
+					span Have outstanding communication skills
+				li
+					span Are willing to provide a personalized learning experience to international students
+
+	+modal('ques1', 'modalContent1')
+	mixin modalContent2()
+		.c-modal__header
+			p What are the technology requirements?
+		.c-modal__body
+			p No specific certification or teaching experience is required! We welcome English tutors who:
+			ul
+				li
+					span Enjoy sharing knowledge and making a difference in students’ lives
+				li
+					span Have outstanding communication skills
+				li
+					span Are willing to provide a personalized learning experience to international students
+
+	+modal('ques2', 'modalContent2')
+	mixin modalContent3()
+		.c-modal__header
+			p How do I become a tutor?
+		.c-modal__body
+			p No specific certification or teaching experience is required! We welcome English tutors who:
+			ul
+				li
+					span Enjoy sharing knowledge and making a difference in students’ lives
+				li
+					span Have outstanding communication skills
+				li
+					span Are willing to provide a personalized learning experience to international students
+
+	+modal('ques3', 'modalContent3')
+	mixin modalContent4()
+		.c-modal__header
+			p Is it free to create a tutor profile on Preply?
+		.c-modal__body
+			p No specific certification or teaching experience is required! We welcome English tutors who:
+			ul
+				li
+					span Enjoy sharing knowledge and making a difference in students’ lives
+				li
+					span Have outstanding communication skills
+				li
+					span Are willing to provide a personalized learning experience to international students
+
+	+modal('ques4', 'modalContent4')
+	mixin modalContent5()
+		.c-modal__header
+			p Why should I teach on Preply?
+		.c-modal__body
+			p No specific certification or teaching experience is required! We welcome English tutors who:
+			ul
+				li
+					span Enjoy sharing knowledge and making a difference in students’ lives
+				li
+					span Have outstanding communication skills
+				li
+					span Are willing to provide a personalized learning experience to international students
+
+	+modal('ques5', 'modalContent5')
+	mixin modalContent6()
+		.c-modal__header
+			p How much can I earn on Preply?
+		.c-modal__body
+			p No specific certification or teaching experience is required! We welcome English tutors who:
+			ul
+				li
+					span Enjoy sharing knowledge and making a difference in students’ lives
+				li
+					span Have outstanding communication skills
+				li
+					span Are willing to provide a personalized learning experience to international students
+
+	+modal('ques6', 'modalContent6')
+
 block content
 	div.body.body--start(class!= pageClassName)
 

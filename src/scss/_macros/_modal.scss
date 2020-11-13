@@ -1,5 +1,62 @@
 // MODAL :: START
 
-.c-modal {}
+.c-modal {
+	&#ques1,
+	&#ques2,
+	&#ques3,
+	&#ques4,
+	&#ques5,
+	&#ques6 {
+		width: 100%;
+		max-width: 481px;
+		padding: 48px;
+		box-shadow: 0 4px 28px 0 rgba(0, 0, 0, 0.08);
+		border-radius: 4px;
+		background-color: #FFFFFF;
+
+		.c-modal {
+			&__header {
+				padding-bottom: 15px;
+
+				p {
+					font-weight: 500;
+					font-size: 20px;
+					line-height: 24px;
+					letter-spacing: -0.075px;
+					color: #384047;
+				}
+			}
+
+			&__body {
+				p {
+					padding-bottom: 16px;
+					font-size: 16px;
+					line-height: 24px;
+					color: #6F757B;
+				}
+
+				ul {
+					padding-left: 20px;
+
+					li {
+						list-style-type: disc;
+						font-size: 18px;
+						color: #3bb3bd;
+
+						&:not(:last-of-type) {
+							padding-bottom: 12px;
+						}
+					}
+
+					span {
+						font-size: 16px;
+						line-height: 24px;
+						color: #6F757B;
+					}
+				}
+			}
+		}
+	}
+}
 
 // MODAL :: END

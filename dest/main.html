@@ -28,6 +28,7 @@
     <meta name="msapplication-TileImage" content="./icon/ms-icon-144x144.png">
     <meta name="theme-color" content="#ffffff">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&amp;display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/magnific-popup.min.css" rel="stylesheet">
     <!-- STYLE :: START-->
     <link rel="stylesheet" href="css/vendor.css">
     <link rel="stylesheet" href="css/main.css">
@@ -43,6 +44,42 @@
         <div class="header__wrapper-right">
           <div>
             <div class="header__nav"><a href="#">Find students</a></div>
+            <div class="header__dropdown-wrapper" dropdown-parent-js><a class="header__dropdown-toggle" href="#" dropdown-toggle-js><span><i>English</i>, <u>USD</u></span><i class="icon-font icon-arrow"></i></a>
+              <div class="header__dropdown" dropdown-js>
+                <div>
+                  <p class="header__dropdown-title">Language</p>
+                  <select dropdown-lang-js>
+                    <option value="ru">Русский</option>
+                    <option disabled="" value="en">English</option>
+                    <option value="pl">Polski</option>
+                    <option value="de">Deutsch</option>
+                    <option value="ua">Українська</option>
+                    <option value="pt">Português</option>
+                    <option value="tr">Türkçe</option>
+                    <option value="id">Bahasa Indonesia</option>
+                    <option value="fr">Français</option>
+                    <option value="it">Italiano</option>
+                    <option value="es">Español</option>
+                    <option value="zh">中文</option>
+                    <option value="ja">日本語</option>
+                    <option value="ko">한국어</option>
+                    <option value="ar"></option>
+                  </select>
+                </div>
+                <div>
+                  <p class="header__dropdown-title">Currency</p>
+                  <select dropdown-currency-js>
+                    <option value="BRL">BRL</option>
+                    <option value="GBP">GBP</option>
+                    <option value="EUR">EUR</option>
+                    <option value="PLN">PLN</option>
+                    <option value="RUB">RUB</option>
+                    <option value="UAH">UAH</option>
+                    <option disabled="" value="USD">USD</option>
+                  </select>
+                </div>
+              </div>
+            </div>
           </div>
           <div><a class="header__ques" href="#"><img src="img/ques.svg" alt=""></a><a class="header__login" href="#"><i class="icon-font icon-login"></i><span>Login</span></a></div>
         </div>
@@ -54,22 +91,28 @@
       <section class="main" id="main">
         <div class="main__bg"></div>
         <div class="main__wrapper">
-          <div class="main__block">
+          <div class="main__content">
             <h1 class="main__title">Teach English online</h1>
             <p class="main__desc">Sign up and become a tutor</p>
-            <form class="main__form" action="" method="" autocomplete="off">
-              <div class="main__form-field main__form-field--input">
-                <input type="email" name="" placeholder="Email" required>
-              </div>
-              <div class="main__form-field main__form-field--input">
-                <input type="password" name="" placeholder="Password" required>
-              </div>
-              <div class="main__form-field main__form-field--button">
-                <div class="c-btn__wrapper">
-                  <button class="c-btn c-btn__primary c-btn--big" type="submit"><span>Get started</span></button>
+          </div>
+          <div class="main__block">
+            <div>
+              <h1 class="main__title">Teach English online</h1>
+              <p class="main__desc">Sign up and become a tutor</p>
+              <form class="main__form" action="" method="" autocomplete="off">
+                <div class="main__form-field main__form-field--input">
+                  <input type="email" name="" placeholder="Email" required>
                 </div>
-              </div>
-            </form>
+                <div class="main__form-field main__form-field--input">
+                  <input type="password" name="" placeholder="Password" required>
+                </div>
+                <div class="main__form-field main__form-field--button">
+                  <div class="c-btn__wrapper">
+                    <button class="c-btn c-btn__primary c-btn--big" type="submit"><span>Get started</span></button>
+                  </div>
+                </div>
+              </form>
+            </div>
             <div class="main__divider"><span></span>
               <p>or continue with</p><span></span>
             </div>
@@ -149,87 +192,118 @@
               </div>
             </div>
             <div class="teach__wrapper-right">
-              <div class="teach__box-wrapper">
-                <div>
-                  <div class="teach__box">
-                    <div class="teach__box-left"><img src="img/img-teach-1.jpeg" alt=""></div>
-                    <div class="teach__box-right">
-                      <div class="teach__box-header">
-                        <div>
-                          <p class="teach__box-name">Marcella F.</p>
+              <div>
+                <p class="teach__title">Teach students from <br>over 180 countries</p>
+                <p class="teach__desc">Preply tutors teach 800,000+ students globally. Join us and we'll make teaching easy for you.</p>
+                <div class="teach__box-wrapper">
+                  <div>
+                    <div class="teach__box">
+                      <div class="teach__box-left"><img src="img/img-teach-1.jpeg" alt=""></div>
+                      <div class="teach__box-right">
+                        <div class="teach__box-header">
+                          <div>
+                            <p class="teach__box-name">Marcella F.</p>
+                          </div>
+                          <div>
+                            <p class="teach__box-time">12:40</p>
+                          </div>
                         </div>
-                        <div>
-                          <p class="teach__box-time">12:40</p>
-                        </div>
+                        <div class="teach__box-info"><span>Great lesson today!</span></div>
                       </div>
-                      <div class="teach__box-info"><span>Great lesson today!</span></div>
+                    </div>
+                  </div>
+                  <div>
+                    <div class="teach__box">
+                      <div class="teach__box-left"><img src="img/img-teach-2.jpeg" alt=""></div>
+                      <div class="teach__box-right">
+                        <div class="teach__box-header">
+                          <div>
+                            <p class="teach__box-name">Victor M.</p>
+                          </div>
+                          <div>
+                            <p class="teach__box-time">Sep 28</p>
+                          </div>
+                        </div>
+                        <div class="teach__box-info"><span>Can we reschedule our lesson?</span></div>
+                      </div>
+                    </div>
+                  </div>
+                  <div>
+                    <div class="teach__box">
+                      <div class="teach__box-left"><img src="img/img-teach-3.jpeg" alt=""></div>
+                      <div class="teach__box-right">
+                        <div class="teach__box-header">
+                          <div>
+                            <p class="teach__box-name">Wang X.</p>
+                          </div>
+                          <div>
+                            <p class="teach__box-time">Sep 25</p>
+                          </div>
+                        </div>
+                        <div class="teach__box-info"><i class="icon-font icon-paperclip"></i><span>Homework.doc</span></div>
+                      </div>
+                    </div>
+                  </div>
+                  <div>
+                    <div class="teach__box">
+                      <div class="teach__box-left"><img src="img/img-teach-4.jpeg" alt=""></div>
+                      <div class="teach__box-right">
+                        <div class="teach__box-header">
+                          <div>
+                            <p class="teach__box-name">Jennifer C.</p>
+                          </div>
+                          <div>
+                            <p class="teach__box-time">Sep 24</p>
+                          </div>
+                        </div>
+                        <div class="teach__box-info"><span>Thank you!</span></div>
+                      </div>
+                    </div>
+                  </div>
+                  <div>
+                    <div class="teach__box">
+                      <div class="teach__box-left"><img src="img/img-teach-5.jpeg" alt=""></div>
+                      <div class="teach__box-right">
+                        <div class="teach__box-header">
+                          <div>
+                            <p class="teach__box-name">Grace B.</p>
+                          </div>
+                          <div>
+                            <p class="teach__box-time">Sep 24</p>
+                          </div>
+                        </div>
+                        <div class="teach__box-info"><span>Let’s schedule next lesson!</span></div>
+                      </div>
                     </div>
                   </div>
                 </div>
-                <div>
-                  <div class="teach__box">
-                    <div class="teach__box-left"><img src="img/img-teach-2.jpeg" alt=""></div>
-                    <div class="teach__box-right">
-                      <div class="teach__box-header">
-                        <div>
-                          <p class="teach__box-name">Victor M.</p>
-                        </div>
-                        <div>
-                          <p class="teach__box-time">Sep 28</p>
-                        </div>
-                      </div>
-                      <div class="teach__box-info"><span>Can we reschedule our lesson?</span></div>
+                <ul class="teach__list">
+                  <li>
+                    <div><i></i></div>
+                    <div>
+                      <p>Smart calendar</p>
                     </div>
-                  </div>
-                </div>
-                <div>
-                  <div class="teach__box">
-                    <div class="teach__box-left"><img src="img/img-teach-3.jpeg" alt=""></div>
-                    <div class="teach__box-right">
-                      <div class="teach__box-header">
-                        <div>
-                          <p class="teach__box-name">Wang X.</p>
-                        </div>
-                        <div>
-                          <p class="teach__box-time">Sep 25</p>
-                        </div>
-                      </div>
-                      <div class="teach__box-info"><i class="icon-font icon-paperclip"></i><span>Homework.doc</span></div>
+                  </li>
+                  <li>
+                    <div><i></i></div>
+                    <div>
+                      <p>Interactive classroom</p>
                     </div>
-                  </div>
-                </div>
-                <div>
-                  <div class="teach__box">
-                    <div class="teach__box-left"><img src="img/img-teach-4.jpeg" alt=""></div>
-                    <div class="teach__box-right">
-                      <div class="teach__box-header">
-                        <div>
-                          <p class="teach__box-name">Jennifer C.</p>
-                        </div>
-                        <div>
-                          <p class="teach__box-time">Sep 24</p>
-                        </div>
-                      </div>
-                      <div class="teach__box-info"><span>Thank you!</span></div>
+                  </li>
+                  <li>
+                    <div><i></i></div>
+                    <div>
+                      <p>Professional learning plans</p>
                     </div>
-                  </div>
-                </div>
-                <div>
-                  <div class="teach__box">
-                    <div class="teach__box-left"><img src="img/img-teach-5.jpeg" alt=""></div>
-                    <div class="teach__box-right">
-                      <div class="teach__box-header">
-                        <div>
-                          <p class="teach__box-name">Grace B.</p>
-                        </div>
-                        <div>
-                          <p class="teach__box-time">Sep 24</p>
-                        </div>
-                      </div>
-                      <div class="teach__box-info"><span>Let’s schedule next lesson!</span></div>
+                  </li>
+                  <li>
+                    <div><i></i></div>
+                    <div>
+                      <p>Supportive tutor community</p>
                     </div>
-                  </div>
-                </div>
+                  </li>
+                </ul>
+                <div class="c-btn__wrapper"><a class="c-btn c-btn__primary c-btn--big" href="#"><span>Sign up to teach</span></a></div>
               </div>
             </div>
           </div>
@@ -242,7 +316,7 @@
           <div class="reviews__wrapper">
             <div class="reviews__wrapper-left"><img src="img/img-reviews.jpeg" alt=""></div>
             <div class="reviews__wrapper-right"><i class="icon-font icon-quote"></i>
-              <p class="reviews__title">Preply allowed me to make a living without leaving home!</p>
+              <p class="reviews__title"><i class="icon-font icon-quote"></i><span>Preply allowed me to make a living without leaving home!</span><i class="icon-font icon-quote"></i></p>
               <p class="reviews__desc"><span>Eliza G.</span> teaches English on Preply so she can work flexible hours</p>
               <div class="c-btn__wrapper"><a class="c-btn c-btn__primary c-btn--big" href="#"><span>Become a tutor</span></a></div>
             </div>
@@ -257,106 +331,58 @@
             <p class="ques__title">Frequently asked questions</p>
             <div class="ques__collapse-wrapper">
               <div>
-                      <div class="ques__collapse" collapse-parent-js>
-                        <div class="ques__collapse-head" collapse-toggle-js>
+                      <div class="ques__collapse"><a class="ques__collapse-head" href="#ques1" data-effect="mfp-zoom-in" popup-js>
                           <div>
                             <div class="ques__collapse-plus"></div>
                           </div>
                           <div>
                             <p class="ques__collapse-title">What kind of tutors does Preply look for?</p>
-                          </div>
-                        </div>
-                        <div class="ques__collapse-body" collapse-body-js>
-                          <div>
-                            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
-                          </div>
-                        </div>
-                      </div>
+                          </div></a></div>
               </div>
               <div>
-                      <div class="ques__collapse" collapse-parent-js>
-                        <div class="ques__collapse-head" collapse-toggle-js>
+                      <div class="ques__collapse"><a class="ques__collapse-head" href="#ques2" data-effect="mfp-zoom-in" popup-js>
                           <div>
                             <div class="ques__collapse-plus"></div>
                           </div>
                           <div>
                             <p class="ques__collapse-title">What are the technology requirements?</p>
-                          </div>
-                        </div>
-                        <div class="ques__collapse-body" collapse-body-js>
-                          <div>
-                            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
-                          </div>
-                        </div>
-                      </div>
+                          </div></a></div>
               </div>
               <div>
-                      <div class="ques__collapse" collapse-parent-js>
-                        <div class="ques__collapse-head" collapse-toggle-js>
+                      <div class="ques__collapse"><a class="ques__collapse-head" href="#ques3" data-effect="mfp-zoom-in" popup-js>
                           <div>
                             <div class="ques__collapse-plus"></div>
                           </div>
                           <div>
                             <p class="ques__collapse-title">How do I become a tutor?</p>
-                          </div>
-                        </div>
-                        <div class="ques__collapse-body" collapse-body-js>
-                          <div>
-                            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
-                          </div>
-                        </div>
-                      </div>
+                          </div></a></div>
               </div>
               <div>
-                      <div class="ques__collapse" collapse-parent-js>
-                        <div class="ques__collapse-head" collapse-toggle-js>
+                      <div class="ques__collapse"><a class="ques__collapse-head" href="#ques4" data-effect="mfp-zoom-in" popup-js>
                           <div>
                             <div class="ques__collapse-plus"></div>
                           </div>
                           <div>
                             <p class="ques__collapse-title">Is it free to create a tutor profile on Preply?</p>
-                          </div>
-                        </div>
-                        <div class="ques__collapse-body" collapse-body-js>
-                          <div>
-                            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
-                          </div>
-                        </div>
-                      </div>
+                          </div></a></div>
               </div>
               <div>
-                      <div class="ques__collapse" collapse-parent-js>
-                        <div class="ques__collapse-head" collapse-toggle-js>
+                      <div class="ques__collapse"><a class="ques__collapse-head" href="#ques5" data-effect="mfp-zoom-in" popup-js>
                           <div>
                             <div class="ques__collapse-plus"></div>
                           </div>
                           <div>
                             <p class="ques__collapse-title">Why should I teach on Preply?</p>
-                          </div>
-                        </div>
-                        <div class="ques__collapse-body" collapse-body-js>
-                          <div>
-                            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
-                          </div>
-                        </div>
-                      </div>
+                          </div></a></div>
               </div>
               <div>
-                      <div class="ques__collapse" collapse-parent-js>
-                        <div class="ques__collapse-head" collapse-toggle-js>
+                      <div class="ques__collapse"><a class="ques__collapse-head" href="#ques6" data-effect="mfp-zoom-in" popup-js>
                           <div>
                             <div class="ques__collapse-plus"></div>
                           </div>
                           <div>
                             <p class="ques__collapse-title">How much can I earn on Preply?</p>
-                          </div>
-                        </div>
-                        <div class="ques__collapse-body" collapse-body-js>
-                          <div>
-                            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
-                          </div>
-                        </div>
-                      </div>
+                          </div></a></div>
               </div>
             </div>
             <p class="ques__info">If you have any other questions, <a href='#'>check our <br>Help center</a> or <a href='#'>contact our support team</a></p>
@@ -380,8 +406,87 @@
       <!-- SECTION :: END-->
     </div>
   </body>
+  <div class="c-modal mfp-hide mfp-with-anim" id="ques1">
+      <div class="c-modal__header">
+        <p>What kind of tutors does Preply look for?</p>
+      </div>
+      <div class="c-modal__body">
+        <p>No specific certification or teaching experience is required! We welcome English tutors who:</p>
+        <ul>
+          <li><span>Enjoy sharing knowledge and making a difference in students’ lives</span></li>
+          <li><span>Have outstanding communication skills</span></li>
+          <li><span>Are willing to provide a personalized learning experience to international students</span></li>
+        </ul>
+      </div>
+  </div>
+  <div class="c-modal mfp-hide mfp-with-anim" id="ques2">
+      <div class="c-modal__header">
+        <p>What are the technology requirements?</p>
+      </div>
+      <div class="c-modal__body">
+        <p>No specific certification or teaching experience is required! We welcome English tutors who:</p>
+        <ul>
+          <li><span>Enjoy sharing knowledge and making a difference in students’ lives</span></li>
+          <li><span>Have outstanding communication skills</span></li>
+          <li><span>Are willing to provide a personalized learning experience to international students</span></li>
+        </ul>
+      </div>
+  </div>
+  <div class="c-modal mfp-hide mfp-with-anim" id="ques3">
+      <div class="c-modal__header">
+        <p>How do I become a tutor?</p>
+      </div>
+      <div class="c-modal__body">
+        <p>No specific certification or teaching experience is required! We welcome English tutors who:</p>
+        <ul>
+          <li><span>Enjoy sharing knowledge and making a difference in students’ lives</span></li>
+          <li><span>Have outstanding communication skills</span></li>
+          <li><span>Are willing to provide a personalized learning experience to international students</span></li>
+        </ul>
+      </div>
+  </div>
+  <div class="c-modal mfp-hide mfp-with-anim" id="ques4">
+      <div class="c-modal__header">
+        <p>Is it free to create a tutor profile on Preply?</p>
+      </div>
+      <div class="c-modal__body">
+        <p>No specific certification or teaching experience is required! We welcome English tutors who:</p>
+        <ul>
+          <li><span>Enjoy sharing knowledge and making a difference in students’ lives</span></li>
+          <li><span>Have outstanding communication skills</span></li>
+          <li><span>Are willing to provide a personalized learning experience to international students</span></li>
+        </ul>
+      </div>
+  </div>
+  <div class="c-modal mfp-hide mfp-with-anim" id="ques5">
+      <div class="c-modal__header">
+        <p>Why should I teach on Preply?</p>
+      </div>
+      <div class="c-modal__body">
+        <p>No specific certification or teaching experience is required! We welcome English tutors who:</p>
+        <ul>
+          <li><span>Enjoy sharing knowledge and making a difference in students’ lives</span></li>
+          <li><span>Have outstanding communication skills</span></li>
+          <li><span>Are willing to provide a personalized learning experience to international students</span></li>
+        </ul>
+      </div>
+  </div>
+  <div class="c-modal mfp-hide mfp-with-anim" id="ques6">
+      <div class="c-modal__header">
+        <p>How much can I earn on Preply?</p>
+      </div>
+      <div class="c-modal__body">
+        <p>No specific certification or teaching experience is required! We welcome English tutors who:</p>
+        <ul>
+          <li><span>Enjoy sharing knowledge and making a difference in students’ lives</span></li>
+          <li><span>Have outstanding communication skills</span></li>
+          <li><span>Are willing to provide a personalized learning experience to international students</span></li>
+        </ul>
+      </div>
+  </div>
   <!-- SCRIPT :: START-->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.min.js"></script>
   <!--script(src="js/vendor.js")-->
   <script src="js/app.js"></script>
   <!-- SCRIPT :: END-->

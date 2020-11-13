@@ -16,6 +16,40 @@ header#header.header
 				.header__nav
 					a(href="#") Find students
 
+				.header__dropdown-wrapper(dropdown-parent-js)
+					a.header__dropdown-toggle(href="#" dropdown-toggle-js)
+						span!= "<i>English</i>, <u>USD</u>"
+						i.icon-font.icon-arrow
+					.header__dropdown(dropdown-js)
+						div
+							p.header__dropdown-title Language
+							select(dropdown-lang-js)
+								option(value='ru') Русский
+								option(disabled='' value='en') English
+								option(value='pl') Polski
+								option(value='de') Deutsch
+								option(value='ua') Українська
+								option(value='pt') Português
+								option(value='tr') Türkçe
+								option(value='id') Bahasa Indonesia
+								option(value='fr') Français
+								option(value='it') Italiano
+								option(value='es') Español
+								option(value='zh') 中文
+								option(value='ja') 日本語
+								option(value='ko') 한국어
+								option(value='ar')
+						div
+							p.header__dropdown-title Currency
+							select(dropdown-currency-js)
+								option(value='BRL') BRL
+								option(value='GBP') GBP
+								option(value='EUR') EUR
+								option(value='PLN') PLN
+								option(value='RUB') RUB
+								option(value='UAH') UAH
+								option(disabled='' value='USD') USD
+
 			div
 
 				a.header__ques(href="#")

@@ -1,15 +1,12 @@
 // SECTION :: START
 
-mixin collapse(title, desc)
-	.ques__collapse(collapse-parent-js)
-		.ques__collapse-head(collapse-toggle-js)
+mixin collapse(href, title)
+	.ques__collapse
+		a.ques__collapse-head(href!= href data-effect='mfp-zoom-in' popup-js)
 			div
 				.ques__collapse-plus
 			div
 				p.ques__collapse-title!= title
-		.ques__collapse-body(collapse-body-js)
-			div
-				p!= desc
 
 section#ques.ques
 	.c-grid
@@ -19,17 +16,17 @@ section#ques.ques
 
 			.ques__collapse-wrapper
 				div
-					+collapse('What kind of tutors does Preply look for?', "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.")
+					+collapse('#ques1', 'What kind of tutors does Preply look for?')
 				div
-					+collapse('What are the technology requirements?', "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.")
+					+collapse('#ques2', 'What are the technology requirements?')
 				div
-					+collapse('How do I become a tutor?', "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.")
+					+collapse('#ques3', 'How do I become a tutor?')
 				div
-					+collapse('Is it free to create a tutor profile on Preply?', "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.")
+					+collapse('#ques4', 'Is it free to create a tutor profile on Preply?')
 				div
-					+collapse('Why should I teach on Preply?', "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.")
+					+collapse('#ques5', 'Why should I teach on Preply?')
 				div
-					+collapse('How much can I earn on Preply?', "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.")
+					+collapse('#ques6', 'How much can I earn on Preply?')
 
 			p.ques__info!= "If you have any other questions, <a href='#'>check our <br>Help center</a> or <a href='#'>contact our support team</a>"
 

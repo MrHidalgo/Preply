@@ -3,20 +3,37 @@
 .reviews {
 	padding-top: 96px;
 	padding-bottom: 96px;
+	@include adaptive(1023) {
+		padding-top: 80px;
+		padding-bottom: 80px;
+	}
 
 	&__wrapper {
 		display: flex;
 		align-items: center;
+		@include adaptive(1023) {
+			flex-wrap: wrap;
+		}
 
 		&-left,
 		&-right {
 			width: 50%;
+			@include adaptive(1023) {
+				width: 100%;
+				max-width: 610px;
+				margin-left: auto;
+				margin-right: auto;
+			}
 		}
 
 		&-left {
 			overflow: hidden;
 			position: relative;
 			height: 546px;
+			@include adaptive(1023) {
+				height: 458px;
+				margin-bottom: 45px;
+			}
 
 			img {
 				@extend %imageResCoverAbs;
@@ -25,20 +42,56 @@
 
 		&-right {
 			padding-left: 128px;
+			@include adaptive(1023) {
+				padding-left: 0;
+			}
 
 			.icon-font {
 				margin-bottom: 40px;
 				color: rgba(#3bb3bd, 0.15);
 				font-size: 38px;
+				@include adaptive(1023) {
+					display: none;
+				}
 			}
 		}
 	}
 
 	&__title {
+		position: relative;
 		padding-bottom: 30px;
 		font-size: 28px;
 		line-height: 40px;
 		color: #000000;
+
+		span {
+			@include adaptive(1023) {
+				display: block;
+				width: 100%;
+				max-width: 440px;
+				margin-left: auto;
+				margin-right: auto;
+				text-align: center;
+			}
+		}
+
+		.icon-font {
+			display: none;
+			position: absolute;
+			@include adaptive(1023) {
+				display: flex;
+			}
+
+			&:nth-of-type(1) {
+				top: 0;
+				left: 0;
+			}
+			&:nth-of-type(2) {
+				bottom: 0;
+				right: 0;
+				transform: scale(-1);
+			}
+		}
 	}
 
 	&__desc {
@@ -48,9 +101,22 @@
 		font-size: 16px;
 		line-height: 22px;
 		color: #384047;
+		@include adaptive(1023) {
+			text-align: center;
+			margin-left: auto;
+			margin-right: auto;
+		}
 
 		span {
 			font-weight: 500;
+		}
+	}
+
+	.c-btn {
+		&__wrapper {
+			@include adaptive(1023) {
+				justify-content: center;
+			}
 		}
 	}
 }
