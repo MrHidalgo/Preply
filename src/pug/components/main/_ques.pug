@@ -1,0 +1,36 @@
+// SECTION :: START
+
+mixin collapse(title, desc)
+	.ques__collapse(collapse-parent-js)
+		.ques__collapse-head(collapse-toggle-js)
+			div
+				.ques__collapse-plus
+			div
+				p.ques__collapse-title!= title
+		.ques__collapse-body(collapse-body-js)
+			div
+				p!= desc
+
+section#ques.ques
+	.c-grid
+		.ques__wrapper
+
+			p.ques__title Frequently asked questions
+
+			.ques__collapse-wrapper
+				div
+					+collapse('What kind of tutors does Preply look for?', "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.")
+				div
+					+collapse('What are the technology requirements?', "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.")
+				div
+					+collapse('How do I become a tutor?', "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.")
+				div
+					+collapse('Is it free to create a tutor profile on Preply?', "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.")
+				div
+					+collapse('Why should I teach on Preply?', "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.")
+				div
+					+collapse('How much can I earn on Preply?', "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.")
+
+			p.ques__info!= "If you have any other questions, <a href='#'>check our <br>Help center</a> or <a href='#'>contact our support team</a>"
+
+// SECTION :: END

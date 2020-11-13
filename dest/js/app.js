@@ -22,14 +22,14 @@
  */
 var initHeaderFixed = function initHeaderFixed() {
 
-  var countScroll = $(window).scrollTop(),
-      headerElement = $('.header');
+	var countScroll = $(window).scrollTop(),
+	    headerElement = $('.header');
 
-  if (countScroll > 10) {
-    headerElement.addClass("header--fixed");
-  } else {
-    headerElement.removeClass("header--fixed");
-  }
+	if (countScroll > 10) {
+		headerElement.addClass("header--fixed");
+	} else {
+		headerElement.removeClass("header--fixed");
+	}
 };
 
 /**
@@ -39,23 +39,23 @@ var initHeaderFixed = function initHeaderFixed() {
  */
 var initPreventBehavior = function initPreventBehavior() {
 
-  var link = document.querySelectorAll("a");
+	var link = document.querySelectorAll("a");
 
-  link.forEach(function (val, idx) {
+	link.forEach(function (val, idx) {
 
-    val.addEventListener("click", function (e) {
-      if (val.getAttribute("href") === "#") {
-        e.preventDefault();
-      }
-    });
-  });
+		val.addEventListener("click", function (e) {
+			if (val.getAttribute("href") === "#") {
+				e.preventDefault();
+			}
+		});
+	});
 };
 
 /**
  * @description Window on load.
  */
 window.addEventListener('load', function (ev) {
-  initHeaderFixed();
+	initHeaderFixed();
 });
 
 /**
@@ -67,37 +67,55 @@ window.addEventListener('resize', function (ev) {});
  * @description Window on scroll.
  */
 window.addEventListener('scroll', function (ev) {
-  initHeaderFixed();
+	initHeaderFixed();
 });
 
 /**
  * @description Document DOM ready.
  */
 (function () {
-  /*
-  * =============================================
-  * CALLBACK :: start
-  * ============================================= */
+	/*
+ * =============================================
+ * CALLBACK :: start
+ * ============================================= */
+	var collapseToggle = function collapseToggle() {
+		$('[collapse-toggle-js]').on('click', function (ev) {
+			var el = $(ev.currentTarget),
+			    elParent = el.closest('[collapse-parent-js]'),
+			    elBody = elParent.find('[collapse-body-js]');
 
-  /*
-  * CALLBACK :: end
-  * ============================================= */
+			if (el.hasClass('is-active')) {
+				el.removeClass('is-active');
+				elBody.slideUp(300);
+			} else {
+				$('[collapse-toggle-js]').removeClass('is-active');
+				$('[collapse-body-js]').slideUp(300);
 
-  /**
-   * @name initNative
-   *
-   * @description Init all method
-   */
-  var initNative = function initNative() {
-    // default
-    initPreventBehavior();
-    // ==========================================
+				el.addClass('is-active');
+				elBody.slideDown(300);
+			}
+		});
+	};
+	/*
+ * CALLBACK :: end
+ * ============================================= */
 
-    // lib
-    // ==========================================
+	/**
+  * @name initNative
+  *
+  * @description Init all method
+  */
+	var initNative = function initNative() {
+		// default
+		initPreventBehavior();
+		// ==========================================
 
-    // callback
-    // ==========================================
-  };
-  initNative();
+		// lib
+		// ==========================================
+
+		// callback
+		collapseToggle();
+		// ==========================================
+	};
+	initNative();
 })();

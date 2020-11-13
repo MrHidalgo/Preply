@@ -91,7 +91,7 @@
 }
 
 /* line 23, src/scss/_generated/_spriteFont.scss */
-.icon-checked:before, .icon-close:before, .icon-facebook:before, .icon-flash:before, .icon-login:before, .icon-mail:before, .icon-play:before, .icon-quote:before, .icon-vk:before {
+.icon-checked:before, .icon-close:before, .icon-facebook:before, .icon-flash:before, .icon-login:before, .icon-mail:before, .icon-paperclip:before, .icon-play:before, .icon-quote:before, .icon-vk:before {
   font-family: "iconFont", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -102,49 +102,54 @@
   text-transform: none;
 }
 
-/* line 62, src/scss/_generated/_spriteFont.scss */
+/* line 65, src/scss/_generated/_spriteFont.scss */
 .icon-checked:before {
   content: "";
 }
 
-/* line 62, src/scss/_generated/_spriteFont.scss */
+/* line 65, src/scss/_generated/_spriteFont.scss */
 .icon-close:before {
   content: "";
 }
 
-/* line 62, src/scss/_generated/_spriteFont.scss */
+/* line 65, src/scss/_generated/_spriteFont.scss */
 .icon-facebook:before {
   content: "";
 }
 
-/* line 62, src/scss/_generated/_spriteFont.scss */
+/* line 65, src/scss/_generated/_spriteFont.scss */
 .icon-flash:before {
   content: "";
 }
 
-/* line 62, src/scss/_generated/_spriteFont.scss */
+/* line 65, src/scss/_generated/_spriteFont.scss */
 .icon-login:before {
   content: "";
 }
 
-/* line 62, src/scss/_generated/_spriteFont.scss */
+/* line 65, src/scss/_generated/_spriteFont.scss */
 .icon-mail:before {
   content: "";
 }
 
-/* line 62, src/scss/_generated/_spriteFont.scss */
-.icon-play:before {
+/* line 65, src/scss/_generated/_spriteFont.scss */
+.icon-paperclip:before {
   content: "";
 }
 
-/* line 62, src/scss/_generated/_spriteFont.scss */
-.icon-quote:before {
+/* line 65, src/scss/_generated/_spriteFont.scss */
+.icon-play:before {
   content: "";
 }
 
-/* line 62, src/scss/_generated/_spriteFont.scss */
-.icon-vk:before {
+/* line 65, src/scss/_generated/_spriteFont.scss */
+.icon-quote:before {
   content: "";
+}
+
+/* line 65, src/scss/_generated/_spriteFont.scss */
+.icon-vk:before {
+  content: "";
 }
 
 /* line 1, src/scss/_shared/_main-setting-reset.scss */

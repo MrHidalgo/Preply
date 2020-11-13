@@ -45,14 +45,17 @@
 	@if $filename == mail {
 		$char: "\E006";
 	}
-	@if $filename == play {
+	@if $filename == paperclip {
 		$char: "\E007";
 	}
-	@if $filename == quote {
+	@if $filename == play {
 		$char: "\E008";
 	}
-	@if $filename == vk {
+	@if $filename == quote {
 		$char: "\E009";
+	}
+	@if $filename == vk {
+		$char: "\E00A";
 	}
 
 	@return $char;
@@ -91,6 +94,10 @@
 }
 .icon-mail {
 	@include icon(mail);
+
+}
+.icon-paperclip {
+	@include icon(paperclip);
 
 }
 .icon-play {

@@ -1,0 +1,38 @@
+// SECTION :: START
+
+section#main.main
+
+	.main__bg
+
+	.main__wrapper
+
+		.main__block
+			h1.main__title Teach English online
+			p.main__desc Sign up and become a tutor
+
+			form.main__form(action='' method='' autocomplete='off')
+				.main__form-field.main__form-field--input
+					input(type='email' name='' placeholder='Email' required)
+				.main__form-field.main__form-field--input
+					input(type='password' name='' placeholder='Password' required)
+				.main__form-field.main__form-field--button
+					.c-btn__wrapper
+						button.c-btn.c-btn__primary.c-btn--big(type='submit')
+							span Get started
+
+			.main__divider
+				span
+				p or continue with
+				span
+
+			.main__btn.c-btn__wrapper
+				a.c-btn.c-btn--big.c-btn__secondary(href="#")
+					img(src="img/facebook.png" alt="")
+					span Facebook
+				a.c-btn.c-btn--big.c-btn__secondary(href="#")
+					img(src="img/google.png" alt="")
+					span Google
+
+			p.main__info!= "By signing up, you agree to Preply’s <a href='#'>Terms of Service</a> <br>and <a href='#'>Privacy Policy</a>"
+
+// SECTION :: END
