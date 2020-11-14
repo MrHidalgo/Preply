@@ -32,7 +32,12 @@ footer#footer.footer
 									i.icon-font.icon-facebook
 								p Facebook
 						li.social__item
-							a.social__link.social__link--vk(href="#")
+							a.social__link.social__link--instagram(href="https://www.instagram.com/preplycom/")
+								span
+									i.icon-font.icon-instagram
+								p Instagram
+						li.social__item
+							a.social__link.social__link--vk(href="https://vk.com/preply")
 								span
 									i.icon-font.icon-vk
 								p VK
@@ -45,29 +50,11 @@ footer#footer.footer
 				.footer__col.footer__col-4
 
 					div
-						p.footer__title Review
+						p.footer__title Apps
 
-						ul.rating
-							li.rating__item
-								p.rating__star
-									+iconSVG('star')
-							li.rating__item
-								p.rating__star
-									+iconSVG('star')
-							li.rating__item
-								p.rating__star
-									+iconSVG('star')
-							li.rating__item
-								p.rating__star
-									+iconSVG('star')
-							li.rating__item
-								p.rating__star.rating__star--half
-									+iconSVG('star')
-									+iconSVG('half-star')
-
-					div
-						p.footer__desc!= "Based on 56,762 reviews<br>Leave a review"
-
-						img(src="img/img-like.jpg" alt="")
+						a.footer__btn(href="#")
+							img(src="img/img-apple-store.svg" alt="")
+						a.footer__btn(href="#")
+							img(src="img/img-google-store.svg" alt="")
 
 // FOOTER :: END

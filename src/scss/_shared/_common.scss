@@ -3,12 +3,19 @@
 .social {
 	display: flex;
 	flex-direction: column;
+	@include adaptive(767) {
+		flex-direction: row;
+	}
 
 	&__item {
 		display: flex;
 
 		&:not(:last-of-type) {
 			padding-bottom: 9px;
+			@include adaptive(767) {
+				padding-bottom: 0;
+				margin-right: 10px;
+			}
 		}
 	}
 
@@ -60,6 +67,10 @@
 					color: #e0e2e3;
 					font-size: 14px;
 					@include transition(color);
+				}
+				&-instagram {
+					color: #384047;
+					font-size: 10px;
 				}
 				&-vk,
 				&-play {
@@ -135,6 +146,27 @@
 		font-size: 10.7px;
 		line-height: 13px;
 		color: #FFFFFF;
+	}
+}
+
+
+.overlay {
+	opacity: 0;
+	z-index: 1555;
+	visibility: hidden;
+	overflow: hidden;
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: rgba(225, 226, 227, 0.85);
+	@include transition(opacity, visibility);
+
+	&.is-show {
+		opacity: 1;
+		visibility: visible;
+		@include transition(opacity, visibility);
 	}
 }
 

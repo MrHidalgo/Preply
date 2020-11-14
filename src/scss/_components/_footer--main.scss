@@ -1,0 +1,141 @@
+// FOOTER :: START
+
+.footer {
+	.c-grid {
+		max-width: 1280px;
+	}
+
+	&__row {
+		&-1 {
+			padding-top: 39px;
+			padding-bottom: 46px;
+			background-color: #384047;
+			@include adaptive(767) {
+				padding-top: 16px;
+				padding-bottom: 16px;
+			}
+		}
+	}
+
+	&__wrapper {
+		display: flex;
+		padding-left: 31px;
+		padding-right: 31px;
+		@include adaptive(1023) {
+			padding-left: 0;
+			padding-right: 0;
+		}
+		@include adaptive(767) {
+			flex-direction: column;
+		}
+	}
+
+	&__col {
+		width: 100%;
+		max-width: calc(100% / 4);
+		@include adaptive(767) {
+			max-width: 100%;
+			padding-bottom: 15px;
+		}
+	}
+
+	&__title {
+		padding-bottom: 18px;
+		font-size: 14.2667px;
+		line-height: 17px;
+		color: #FFFFFF;
+		@include adaptive(767) {
+			padding-bottom: 10px;
+		}
+	}
+
+	&__subtitle {
+		display: flex;
+		flex-wrap: wrap;
+		font-weight: 500;
+		font-size: 12.4833px;
+		line-height: 21px;
+		color: #FFFFFF;
+
+		img {
+			display: block;
+			max-width: 100%;
+			height: auto;
+			margin-right: 8px;
+		}
+	}
+
+	&__desc {
+		font-size: 12.4833px;
+		line-height: 21px;
+		color: #E0E2E3;
+		@include adaptive(767) {
+			br {
+				display: none;
+			}
+		}
+	}
+
+	&__link {
+		font-weight: 500;
+		font-size: 12.4833px;
+		line-height: 21px;
+		color: #FFFFFF;
+
+		&--email {
+			display: flex;
+			align-items: center;
+
+			.icon-font {
+				margin-right: 5px;
+				color: #e0e2e3;
+				font-size: 10px;
+			}
+		}
+	}
+
+	&__nav {
+		display: flex;
+		align-items: center;
+
+		&-list {
+			display: flex;
+		}
+
+		&-dot {
+			margin-left: 5px;
+			margin-right: 5px;
+			color: #E0E2E3;
+		}
+
+		&-link {
+			font-size: 10.7px;
+			line-height: 13px;
+			color: #E0E2E3;
+			@include transition(color);
+
+			&:hover {
+				color: #ffffff;
+				@include transition(color);
+			}
+		}
+	}
+
+	&__btn {
+		display: flex;
+		margin-bottom: 15px;
+		@include adaptive(767) {
+			&:not(:last-of-type) {
+				margin-bottom: 5px;
+			}
+		}
+
+		img {
+			display: block;
+			max-width: 125px;
+			height: auto;
+		}
+	}
+}
+
+// FOOTER :: END

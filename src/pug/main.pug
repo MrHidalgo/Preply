@@ -5,7 +5,6 @@ pageClassName: p-home
 ---
 extends shared/_layout-main
 
-block footer
 block modal
 	mixin modalContent1()
 		.c-modal__header
@@ -14,7 +13,7 @@ block modal
 			p No specific certification or teaching experience is required! We welcome English tutors who:
 			ul
 				li
-					span Enjoy sharing knowledge and making a difference in students’ lives
+					span Enjoy sharing knowledge and making a difference to students’ lives
 				li
 					span Have outstanding communication skills
 				li
@@ -23,74 +22,48 @@ block modal
 	+modal('ques1', 'modalContent1')
 	mixin modalContent2()
 		.c-modal__header
-			p What are the technology requirements?
+			p How do you become a tutor?
 		.c-modal__body
-			p No specific certification or teaching experience is required! We welcome English tutors who:
-			ul
-				li
-					span Enjoy sharing knowledge and making a difference in students’ lives
-				li
-					span Have outstanding communication skills
-				li
-					span Are willing to provide a personalized learning experience to international students
+			p It’s easy to start and easy to earn! Sign up and create a tutor profile. We’ll check it within 5 business days.
+			p Once your profile is approved, students from around the world will see it on Preply and will be able to book lessons with you. Also, you’ll have access to useful tools, training webinars and teaching materials for your lessons.
+			p!= "Learn more about creating a tutor profile. [<a href='#'>https://help.preply.com/en/articles/4175138-register-as-a-tutor</a>]"
 
 	+modal('ques2', 'modalContent2')
 	mixin modalContent3()
 		.c-modal__header
-			p How do I become a tutor?
+			p What does Preply offer?
 		.c-modal__body
-			p No specific certification or teaching experience is required! We welcome English tutors who:
 			ul
 				li
-					span Enjoy sharing knowledge and making a difference in students’ lives
+					span An opportunity to earn by sharing what you know
 				li
-					span Have outstanding communication skills
+					span A steady stream of new students looking for English tutors
 				li
-					span Are willing to provide a personalized learning experience to international students
+					span Convenient tools for managing your lessons and connecting with students
+				li
+					span Safe payment methods (Paypal, Payoneer or Skrill)
+				li
+					span Learning plans and tests to save you time on lesson preparation
+				li
+					span Support from our friendly team through training webinars, live chat and email
 
 	+modal('ques3', 'modalContent3')
 	mixin modalContent4()
 		.c-modal__header
-			p Is it free to create a tutor profile on Preply?
+			p Are there any additional requirements?
 		.c-modal__body
-			p No specific certification or teaching experience is required! We welcome English tutors who:
-			ul
-				li
-					span Enjoy sharing knowledge and making a difference in students’ lives
-				li
-					span Have outstanding communication skills
-				li
-					span Are willing to provide a personalized learning experience to international students
+			p You will need a stable internet connection, a webcam, and a microphone for conducting lessons in the virtual classroom. And, of course, a passion for teaching English to help your students reach their goals!
 
 	+modal('ques4', 'modalContent4')
 	mixin modalContent5()
 		.c-modal__header
-			p Why should I teach on Preply?
+			p Is it free to display a tutor profile on Preply?
 		.c-modal__body
-			p No specific certification or teaching experience is required! We welcome English tutors who:
-			ul
-				li
-					span Enjoy sharing knowledge and making a difference in students’ lives
-				li
-					span Have outstanding communication skills
-				li
-					span Are willing to provide a personalized learning experience to international students
+			p Yes. It is free to create a tutor profile, get exposure to students, and use Preply’s tools and materials.
+			p We only charge a commission when a tutor starts to get bookings from students. The more hours you teach on Preply, the lower the rate of commission.
+			p!= "Learn more about how Preply tutors get paid. <a href='#'>https://preply.com/en/help/model</a>"
 
 	+modal('ques5', 'modalContent5')
-	mixin modalContent6()
-		.c-modal__header
-			p How much can I earn on Preply?
-		.c-modal__body
-			p No specific certification or teaching experience is required! We welcome English tutors who:
-			ul
-				li
-					span Enjoy sharing knowledge and making a difference in students’ lives
-				li
-					span Have outstanding communication skills
-				li
-					span Are willing to provide a personalized learning experience to international students
-
-	+modal('ques6', 'modalContent6')
 
 block content
 	div.body.body--start(class!= pageClassName)

@@ -42,23 +42,26 @@
 	@if $filename == flash {
 		$char: "\E005";
 	}
-	@if $filename == login {
+	@if $filename == instagram {
 		$char: "\E006";
 	}
-	@if $filename == mail {
+	@if $filename == login {
 		$char: "\E007";
 	}
-	@if $filename == paperclip {
+	@if $filename == mail {
 		$char: "\E008";
 	}
-	@if $filename == play {
+	@if $filename == paperclip {
 		$char: "\E009";
 	}
-	@if $filename == quote {
+	@if $filename == play {
 		$char: "\E00A";
 	}
-	@if $filename == vk {
+	@if $filename == quote {
 		$char: "\E00B";
+	}
+	@if $filename == vk {
+		$char: "\E00C";
 	}
 
 	@return $char;
@@ -93,6 +96,10 @@
 }
 .icon-flash {
 	@include icon(flash);
+
+}
+.icon-instagram {
+	@include icon(instagram);
 
 }
 .icon-login {

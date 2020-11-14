@@ -34,10 +34,23 @@ var initHamburger = function initHamburger() {
 			var elem = ev.currentTarget;
 
 			elem.classList.toggle("is-active");
-			// mobileContainer.classList.toggle("is-open");
+			mobileContainer.classList.toggle("is-open");
+
+			document.querySelector('#overlay').classList.toggle('is-show');
 
 			hideScrollContainer.forEach(function (val, idx) {
 				val.classList.toggle("is-hideScroll");
+			});
+		});
+
+		document.querySelector('.menu__close').addEventListener('click', function () {
+			btn.classList.remove("is-active");
+			mobileContainer.classList.remove("is-open");
+
+			document.querySelector('#overlay').classList.remove('is-show');
+
+			hideScrollContainer.forEach(function (val, idx) {
+				val.classList.remove("is-hideScroll");
 			});
 		});
 	}

@@ -247,7 +247,7 @@
 }
 
 /* line 23, src/scss/_generated/_spriteFont.scss */
-.icon-arrow:before, .icon-checked:before, .icon-close:before, .icon-facebook:before, .icon-flash:before, .icon-login:before, .icon-mail:before, .icon-paperclip:before, .icon-play:before, .icon-quote:before, .icon-vk:before {
+.icon-arrow:before, .icon-checked:before, .icon-close:before, .icon-facebook:before, .icon-flash:before, .icon-instagram:before, .icon-login:before, .icon-mail:before, .icon-paperclip:before, .icon-play:before, .icon-quote:before, .icon-vk:before {
   font-family: "iconFont", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -258,59 +258,64 @@
   text-transform: none;
 }
 
-/* line 68, src/scss/_generated/_spriteFont.scss */
+/* line 71, src/scss/_generated/_spriteFont.scss */
 .icon-arrow:before {
   content: "";
 }
 
-/* line 68, src/scss/_generated/_spriteFont.scss */
+/* line 71, src/scss/_generated/_spriteFont.scss */
 .icon-checked:before {
   content: "";
 }
 
-/* line 68, src/scss/_generated/_spriteFont.scss */
+/* line 71, src/scss/_generated/_spriteFont.scss */
 .icon-close:before {
   content: "";
 }
 
-/* line 68, src/scss/_generated/_spriteFont.scss */
+/* line 71, src/scss/_generated/_spriteFont.scss */
 .icon-facebook:before {
   content: "";
 }
 
-/* line 68, src/scss/_generated/_spriteFont.scss */
+/* line 71, src/scss/_generated/_spriteFont.scss */
 .icon-flash:before {
   content: "";
 }
 
-/* line 68, src/scss/_generated/_spriteFont.scss */
-.icon-login:before {
+/* line 71, src/scss/_generated/_spriteFont.scss */
+.icon-instagram:before {
   content: "";
 }
 
-/* line 68, src/scss/_generated/_spriteFont.scss */
-.icon-mail:before {
+/* line 71, src/scss/_generated/_spriteFont.scss */
+.icon-login:before {
   content: "";
 }
 
-/* line 68, src/scss/_generated/_spriteFont.scss */
-.icon-paperclip:before {
+/* line 71, src/scss/_generated/_spriteFont.scss */
+.icon-mail:before {
   content: "";
 }
 
-/* line 68, src/scss/_generated/_spriteFont.scss */
-.icon-play:before {
+/* line 71, src/scss/_generated/_spriteFont.scss */
+.icon-paperclip:before {
   content: "";
 }
 
-/* line 68, src/scss/_generated/_spriteFont.scss */
-.icon-quote:before {
+/* line 71, src/scss/_generated/_spriteFont.scss */
+.icon-play:before {
   content: "";
 }
 
-/* line 68, src/scss/_generated/_spriteFont.scss */
-.icon-vk:before {
+/* line 71, src/scss/_generated/_spriteFont.scss */
+.icon-quote:before {
   content: "";
+}
+
+/* line 71, src/scss/_generated/_spriteFont.scss */
+.icon-vk:before {
+  content: "";
 }
 
 /* line 1, src/scss/_shared/_main-setting-reset.scss */
@@ -532,7 +537,18 @@ picture {
           flex-direction: column;
 }
 
-/* line 7, src/scss/_shared/_common.scss */
+@media screen and (max-width: 767px) {
+  /* line 3, src/scss/_shared/_common.scss */
+  .social {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: row;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+}
+
+/* line 10, src/scss/_shared/_common.scss */
 .social__item {
   display: -webkit-box;
   display: -webkit-flex;
@@ -540,12 +556,20 @@ picture {
   display: flex;
 }
 
-/* line 10, src/scss/_shared/_common.scss */
+/* line 13, src/scss/_shared/_common.scss */
 .social__item:not(:last-of-type) {
   padding-bottom: 9px;
 }
 
-/* line 15, src/scss/_shared/_common.scss */
+@media screen and (max-width: 767px) {
+  /* line 13, src/scss/_shared/_common.scss */
+  .social__item:not(:last-of-type) {
+    padding-bottom: 0;
+    margin-right: 10px;
+  }
+}
+
+/* line 22, src/scss/_shared/_common.scss */
 .social__link {
   display: -webkit-box;
   display: -webkit-flex;
@@ -557,7 +581,7 @@ picture {
           align-items: center;
 }
 
-/* line 20, src/scss/_shared/_common.scss */
+/* line 27, src/scss/_shared/_common.scss */
 .social__link:hover span {
   background-color: #ffffff;
   -webkit-transition: background-color 0.4s ease-in-out;
@@ -565,7 +589,7 @@ picture {
   transition: background-color 0.4s ease-in-out;
 }
 
-/* line 27, src/scss/_shared/_common.scss */
+/* line 34, src/scss/_shared/_common.scss */
 .social__link:hover .icon-font.icon-facebook {
   color: #fff;
   -webkit-transition: color 0.4s ease-in-out;
@@ -573,7 +597,7 @@ picture {
   transition: color 0.4s ease-in-out;
 }
 
-/* line 34, src/scss/_shared/_common.scss */
+/* line 41, src/scss/_shared/_common.scss */
 .social__link:hover p {
   color: #ffffff;
   -webkit-transition: color 0.4s ease-in-out;
@@ -581,12 +605,12 @@ picture {
   transition: color 0.4s ease-in-out;
 }
 
-/* line 41, src/scss/_shared/_common.scss */
+/* line 48, src/scss/_shared/_common.scss */
 .social__link.social__link--facebook span {
   background-color: transparent;
 }
 
-/* line 46, src/scss/_shared/_common.scss */
+/* line 53, src/scss/_shared/_common.scss */
 .social__link span {
   display: -webkit-box;
   display: -webkit-flex;
@@ -610,7 +634,7 @@ picture {
   transition: background-color 0.4s ease-in-out;
 }
 
-/* line 59, src/scss/_shared/_common.scss */
+/* line 66, src/scss/_shared/_common.scss */
 .social__link .icon-font.icon-facebook {
   color: #e0e2e3;
   font-size: 14px;
@@ -619,19 +643,25 @@ picture {
   transition: color 0.4s ease-in-out;
 }
 
-/* line 64, src/scss/_shared/_common.scss */
+/* line 71, src/scss/_shared/_common.scss */
+.social__link .icon-font.icon-instagram {
+  color: #384047;
+  font-size: 10px;
+}
+
+/* line 75, src/scss/_shared/_common.scss */
 .social__link .icon-font.icon-vk, .social__link .icon-font.icon-play {
   color: #384047;
   font-size: 6px;
 }
 
-/* line 69, src/scss/_shared/_common.scss */
+/* line 80, src/scss/_shared/_common.scss */
 .social__link .icon-font.icon-play {
   position: relative;
   left: 1px;
 }
 
-/* line 76, src/scss/_shared/_common.scss */
+/* line 87, src/scss/_shared/_common.scss */
 .social__link p {
   padding-left: 9px;
   font-size: 13px;
@@ -642,7 +672,7 @@ picture {
   transition: color 0.4s ease-in-out;
 }
 
-/* line 87, src/scss/_shared/_common.scss */
+/* line 98, src/scss/_shared/_common.scss */
 .rating {
   display: -webkit-box;
   display: -webkit-flex;
@@ -655,7 +685,7 @@ picture {
   padding-bottom: 7px;
 }
 
-/* line 92, src/scss/_shared/_common.scss */
+/* line 103, src/scss/_shared/_common.scss */
 .rating__item {
   display: -webkit-box;
   display: -webkit-flex;
@@ -663,12 +693,12 @@ picture {
   display: flex;
 }
 
-/* line 95, src/scss/_shared/_common.scss */
+/* line 106, src/scss/_shared/_common.scss */
 .rating__item:not(:last-of-type) {
   margin-right: 6px;
 }
 
-/* line 100, src/scss/_shared/_common.scss */
+/* line 111, src/scss/_shared/_common.scss */
 .rating__star {
   position: relative;
   display: -webkit-box;
@@ -687,17 +717,17 @@ picture {
   height: 14px;
 }
 
-/* line 109, src/scss/_shared/_common.scss */
+/* line 120, src/scss/_shared/_common.scss */
 .rating__star.rating__star--half svg:first-of-type {
   fill: #79838C;
 }
 
-/* line 112, src/scss/_shared/_common.scss */
+/* line 123, src/scss/_shared/_common.scss */
 .rating__star.rating__star--half svg:last-of-type {
   left: -4px;
 }
 
-/* line 117, src/scss/_shared/_common.scss */
+/* line 128, src/scss/_shared/_common.scss */
 .rating__star svg {
   position: absolute;
   width: 14px;
@@ -705,7 +735,7 @@ picture {
   fill: #fff;
 }
 
-/* line 127, src/scss/_shared/_common.scss */
+/* line 138, src/scss/_shared/_common.scss */
 .copyright {
   display: -webkit-box;
   display: -webkit-flex;
@@ -714,18 +744,44 @@ picture {
 }
 
 @media screen and (max-width: 767px) {
-  /* line 127, src/scss/_shared/_common.scss */
+  /* line 138, src/scss/_shared/_common.scss */
   .copyright {
     padding-bottom: 6px;
   }
 }
 
-/* line 133, src/scss/_shared/_common.scss */
+/* line 144, src/scss/_shared/_common.scss */
 .copyright__text {
   font-weight: 500;
   font-size: 10.7px;
   line-height: 13px;
   color: #FFFFFF;
+}
+
+/* line 153, src/scss/_shared/_common.scss */
+.overlay {
+  opacity: 0;
+  z-index: 1555;
+  visibility: hidden;
+  overflow: hidden;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(225, 226, 227, 0.85);
+  -webkit-transition: opacity 0.4s ease-in-out, visibility 0.4s ease-in-out;
+  -o-transition: opacity 0.4s ease-in-out, visibility 0.4s ease-in-out;
+  transition: opacity 0.4s ease-in-out, visibility 0.4s ease-in-out;
+}
+
+/* line 166, src/scss/_shared/_common.scss */
+.overlay.is-show {
+  opacity: 1;
+  visibility: visible;
+  -webkit-transition: opacity 0.4s ease-in-out, visibility 0.4s ease-in-out;
+  -o-transition: opacity 0.4s ease-in-out, visibility 0.4s ease-in-out;
+  transition: opacity 0.4s ease-in-out, visibility 0.4s ease-in-out;
 }
 
 /* line 1, src/scss/_shared/_magnificPopup.scss */
@@ -1018,24 +1074,30 @@ picture {
   color: #6F757B;
 }
 
-/* line 38, src/scss/_macros/_modal.scss */
+/* line 37, src/scss/_macros/_modal.scss */
+.c-modal#ques1 .c-modal__body p a, .c-modal#ques2 .c-modal__body p a, .c-modal#ques3 .c-modal__body p a, .c-modal#ques4 .c-modal__body p a, .c-modal#ques5 .c-modal__body p a, .c-modal#ques6 .c-modal__body p a {
+  color: #3bb3bd;
+  text-decoration: underline;
+}
+
+/* line 43, src/scss/_macros/_modal.scss */
 .c-modal#ques1 .c-modal__body ul, .c-modal#ques2 .c-modal__body ul, .c-modal#ques3 .c-modal__body ul, .c-modal#ques4 .c-modal__body ul, .c-modal#ques5 .c-modal__body ul, .c-modal#ques6 .c-modal__body ul {
   padding-left: 20px;
 }
 
-/* line 41, src/scss/_macros/_modal.scss */
+/* line 46, src/scss/_macros/_modal.scss */
 .c-modal#ques1 .c-modal__body ul li, .c-modal#ques2 .c-modal__body ul li, .c-modal#ques3 .c-modal__body ul li, .c-modal#ques4 .c-modal__body ul li, .c-modal#ques5 .c-modal__body ul li, .c-modal#ques6 .c-modal__body ul li {
   list-style-type: disc;
   font-size: 18px;
   color: #3bb3bd;
 }
 
-/* line 46, src/scss/_macros/_modal.scss */
+/* line 51, src/scss/_macros/_modal.scss */
 .c-modal#ques1 .c-modal__body ul li:not(:last-of-type), .c-modal#ques2 .c-modal__body ul li:not(:last-of-type), .c-modal#ques3 .c-modal__body ul li:not(:last-of-type), .c-modal#ques4 .c-modal__body ul li:not(:last-of-type), .c-modal#ques5 .c-modal__body ul li:not(:last-of-type), .c-modal#ques6 .c-modal__body ul li:not(:last-of-type) {
   padding-bottom: 12px;
 }
 
-/* line 51, src/scss/_macros/_modal.scss */
+/* line 56, src/scss/_macros/_modal.scss */
 .c-modal#ques1 .c-modal__body ul span, .c-modal#ques2 .c-modal__body ul span, .c-modal#ques3 .c-modal__body ul span, .c-modal#ques4 .c-modal__body ul span, .c-modal#ques5 .c-modal__body ul span, .c-modal#ques6 .c-modal__body ul span {
   font-size: 16px;
   line-height: 24px;
@@ -1454,6 +1516,394 @@ picture {
   -webkit-transition: color 0.4s ease-in-out;
   -o-transition: color 0.4s ease-in-out;
   transition: color 0.4s ease-in-out;
+}
+
+/* line 4, src/scss/_components/_footer--main.scss */
+.footer .c-grid {
+  max-width: 1280px;
+}
+
+/* line 9, src/scss/_components/_footer--main.scss */
+.footer__row-1 {
+  padding-top: 39px;
+  padding-bottom: 46px;
+  background-color: #384047;
+}
+
+@media screen and (max-width: 767px) {
+  /* line 9, src/scss/_components/_footer--main.scss */
+  .footer__row-1 {
+    padding-top: 16px;
+    padding-bottom: 16px;
+  }
+}
+
+/* line 20, src/scss/_components/_footer--main.scss */
+.footer__wrapper {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  padding-left: 31px;
+  padding-right: 31px;
+}
+
+@media screen and (max-width: 1023px) {
+  /* line 20, src/scss/_components/_footer--main.scss */
+  .footer__wrapper {
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  /* line 20, src/scss/_components/_footer--main.scss */
+  .footer__wrapper {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
+/* line 33, src/scss/_components/_footer--main.scss */
+.footer__col {
+  width: 100%;
+  max-width: -webkit-calc(100% / 4);
+  max-width: calc(100% / 4);
+}
+
+@media screen and (max-width: 767px) {
+  /* line 33, src/scss/_components/_footer--main.scss */
+  .footer__col {
+    max-width: 100%;
+    padding-bottom: 15px;
+  }
+}
+
+/* line 42, src/scss/_components/_footer--main.scss */
+.footer__title {
+  padding-bottom: 18px;
+  font-size: 14.2667px;
+  line-height: 17px;
+  color: #FFFFFF;
+}
+
+@media screen and (max-width: 767px) {
+  /* line 42, src/scss/_components/_footer--main.scss */
+  .footer__title {
+    padding-bottom: 10px;
+  }
+}
+
+/* line 52, src/scss/_components/_footer--main.scss */
+.footer__subtitle {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
+  font-weight: 500;
+  font-size: 12.4833px;
+  line-height: 21px;
+  color: #FFFFFF;
+}
+
+/* line 60, src/scss/_components/_footer--main.scss */
+.footer__subtitle img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  margin-right: 8px;
+}
+
+/* line 68, src/scss/_components/_footer--main.scss */
+.footer__desc {
+  font-size: 12.4833px;
+  line-height: 21px;
+  color: #E0E2E3;
+}
+
+@media screen and (max-width: 767px) {
+  /* line 73, src/scss/_components/_footer--main.scss */
+  .footer__desc br {
+    display: none;
+  }
+}
+
+/* line 79, src/scss/_components/_footer--main.scss */
+.footer__link {
+  font-weight: 500;
+  font-size: 12.4833px;
+  line-height: 21px;
+  color: #FFFFFF;
+}
+
+/* line 85, src/scss/_components/_footer--main.scss */
+.footer__link--email {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+/* line 89, src/scss/_components/_footer--main.scss */
+.footer__link--email .icon-font {
+  margin-right: 5px;
+  color: #e0e2e3;
+  font-size: 10px;
+}
+
+/* line 97, src/scss/_components/_footer--main.scss */
+.footer__nav {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+/* line 101, src/scss/_components/_footer--main.scss */
+.footer__nav-list {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+/* line 105, src/scss/_components/_footer--main.scss */
+.footer__nav-dot {
+  margin-left: 5px;
+  margin-right: 5px;
+  color: #E0E2E3;
+}
+
+/* line 111, src/scss/_components/_footer--main.scss */
+.footer__nav-link {
+  font-size: 10.7px;
+  line-height: 13px;
+  color: #E0E2E3;
+  -webkit-transition: color 0.4s ease-in-out;
+  -o-transition: color 0.4s ease-in-out;
+  transition: color 0.4s ease-in-out;
+}
+
+/* line 117, src/scss/_components/_footer--main.scss */
+.footer__nav-link:hover {
+  color: #ffffff;
+  -webkit-transition: color 0.4s ease-in-out;
+  -o-transition: color 0.4s ease-in-out;
+  transition: color 0.4s ease-in-out;
+}
+
+/* line 124, src/scss/_components/_footer--main.scss */
+.footer__btn {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  margin-bottom: 15px;
+}
+
+@media screen and (max-width: 767px) {
+  /* line 128, src/scss/_components/_footer--main.scss */
+  .footer__btn:not(:last-of-type) {
+    margin-bottom: 5px;
+  }
+}
+
+/* line 133, src/scss/_components/_footer--main.scss */
+.footer__btn img {
+  display: block;
+  max-width: 125px;
+  height: auto;
+}
+
+/* line 3, src/scss/_components/_menu.scss */
+.menu {
+  z-index: 1999;
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transform: translateX(100%);
+      -ms-transform: translateX(100%);
+          transform: translateX(100%);
+  position: fixed;
+  top: 0;
+  right: 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 100%;
+  max-width: 250px;
+  height: 100%;
+  background-color: #384047;
+  -webkit-transition: opacity 0.4s ease-in-out, visibility 0.4s ease-in-out, -webkit-transform 0.4s ease-in-out;
+  transition: opacity 0.4s ease-in-out, visibility 0.4s ease-in-out, -webkit-transform 0.4s ease-in-out;
+  -o-transition: opacity 0.4s ease-in-out, visibility 0.4s ease-in-out, transform 0.4s ease-in-out;
+  transition: opacity 0.4s ease-in-out, visibility 0.4s ease-in-out, transform 0.4s ease-in-out;
+  transition: opacity 0.4s ease-in-out, visibility 0.4s ease-in-out, transform 0.4s ease-in-out, -webkit-transform 0.4s ease-in-out;
+}
+
+/* line 19, src/scss/_components/_menu.scss */
+.menu.is-open {
+  opacity: 1;
+  visibility: visible;
+  -webkit-transform: translateX(0);
+      -ms-transform: translateX(0);
+          transform: translateX(0);
+  -webkit-transition: opacity 0.4s ease-in-out, visibility 0.4s ease-in-out, -webkit-transform 0.4s ease-in-out;
+  transition: opacity 0.4s ease-in-out, visibility 0.4s ease-in-out, -webkit-transform 0.4s ease-in-out;
+  -o-transition: opacity 0.4s ease-in-out, visibility 0.4s ease-in-out, transform 0.4s ease-in-out;
+  transition: opacity 0.4s ease-in-out, visibility 0.4s ease-in-out, transform 0.4s ease-in-out;
+  transition: opacity 0.4s ease-in-out, visibility 0.4s ease-in-out, transform 0.4s ease-in-out, -webkit-transform 0.4s ease-in-out;
+}
+
+/* line 26, src/scss/_components/_menu.scss */
+.menu__close {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+          transform: translateY(-50%);
+  right: 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: 48px;
+  width: 48px;
+  border: 0;
+  outline: 0;
+}
+
+/* line 40, src/scss/_components/_menu.scss */
+.menu__close svg {
+  height: 12px;
+  width: 12px;
+  fill: #aeb5bc;
+}
+
+/* line 47, src/scss/_components/_menu.scss */
+.menu__head {
+  position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 0 24px;
+  height: 70px;
+}
+
+/* line 55, src/scss/_components/_menu.scss */
+.menu__body {
+  overflow-y: auto;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex: 1;
+  -webkit-flex: 1 1 100%;
+      -ms-flex: 1 1 100%;
+          flex: 1 1 100%;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 100%;
+  padding: 24px;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* line 66, src/scss/_components/_menu.scss */
+.menu__nav {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+/* line 70, src/scss/_components/_menu.scss */
+.menu__nav-item {
+  position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-flex: 1;
+  -webkit-flex: auto;
+      -ms-flex: auto;
+          flex: auto;
+  height: 100%;
+  margin-top: 8px;
+  font-size: 16px;
+  color: #fff;
+  text-decoration: none;
+}
+
+/* line 83, src/scss/_components/_menu.scss */
+.menu select {
+  cursor: pointer;
+  outline: none;
+  position: relative;
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  height: 38px;
+  padding: 0 30px 0 12px;
+  -webkit-border-radius: 4px;
+          border-radius: 4px;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  font-size: 14px;
+  line-height: 1.4;
+  background-color: transparent;
+  color: #fff;
+  font-weight: 500;
+  border-color: #6f757b;
+  margin-top: 16px;
 }
 
 /* line 3, src/scss/_components/main/_main.scss */
