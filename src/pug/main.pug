@@ -13,7 +13,7 @@ block modal
 			p No specific certification or teaching experience is required! We welcome English tutors who:
 			ul
 				li
-					span Enjoy sharing knowledge and making a difference to students’ lives
+					span Enjoy sharing knowledge and making a difference in students’ lives
 				li
 					span Have outstanding communication skills
 				li
@@ -24,14 +24,14 @@ block modal
 		.c-modal__header
 			p How do you become a tutor?
 		.c-modal__body
-			p It’s easy to start and easy to earn! Sign up and create a tutor profile. We’ll check it within 5 business days.
-			p Once your profile is approved, students from around the world will see it on Preply and will be able to book lessons with you. Also, you’ll have access to useful tools, training webinars and teaching materials for your lessons.
-			p!= "Learn more about creating a tutor profile. [<a href='#'>https://help.preply.com/en/articles/4175138-register-as-a-tutor</a>]"
+			p It’s easy to start and easy to earn! Sign up and create a tutor profile.
+			p We’ll check it within 5 business days. Once your profile is approved, students from around the world will see it on Preply and will be able to book lessons with you. Also, you’ll have access to useful tools, like training webinars and teaching materials for your lessons.
+			a(href="https://help.preply.com/en/articles/4175138-register-as-a-tutor") Learn more about how to create a profile here
 
 	+modal('ques2', 'modalContent2')
 	mixin modalContent3()
 		.c-modal__header
-			p What does Preply offer?
+			p Why should I teach on Preply?
 		.c-modal__body
 			ul
 				li
@@ -50,20 +50,30 @@ block modal
 	+modal('ques3', 'modalContent3')
 	mixin modalContent4()
 		.c-modal__header
-			p Are there any additional requirements?
+			p What are the technology requirements for Preply tutors?
 		.c-modal__body
-			p You will need a stable internet connection, a webcam, and a microphone for conducting lessons in the virtual classroom. And, of course, a passion for teaching English to help your students reach their goals!
+			p You will need a stable internet connection, a webcam, and a microphone for conducting lessons in the virtual classroom.
 
 	+modal('ques4', 'modalContent4')
 	mixin modalContent5()
 		.c-modal__header
-			p Is it free to display a tutor profile on Preply?
+			p Is it free to create a tutor profile on Preply?
 		.c-modal__body
 			p Yes. It is free to create a tutor profile, get exposure to students, and use Preply’s tools and materials.
-			p We only charge a commission when a tutor starts to get bookings from students. The more hours you teach on Preply, the lower the rate of commission.
-			p!= "Learn more about how Preply tutors get paid. <a href='#'>https://preply.com/en/help/model</a>"
+			p We only charge a commission when a tutor starts to get bookings from students.
+			a(href="https://help.preply.com/en/articles/4175138-register-as-a-tutor") We only charge a commission when a tutor starts to get bookings from students.
 
 	+modal('ques5', 'modalContent5')
+	mixin modalContent6()
+		.c-modal__header
+			p How much can I earn on Preply?
+		.c-modal__body
+			p Most popular tutors on Preply earn up to $550 a week. Your earnings depend on the hourly rate you set, the number of lessons you teach and how many students continue learning with you after the trial lesson. A tip for newly registered tutors: start with a lower hourly rate to get first students faster. You can change your rate anytime.
+			p Preply takes a commission fee from your lessons, and uses it to bring in more students from around the globe and develop an easy-to-use video tool and learning materials for your lessons. We provide free training webinars and multilingual customer support to guide you along every step of your tutoring journey.
+			p The commission for every trial lesson with a new student is 100%. For all subsequent lessons, the commission starts at 33% and decreases to 18% based on how many hours you’ve taught on the platform.
+			a(href="https://preply.com/en/help/model") Learn more about how Preply tutors get paid.
+
+	+modal('ques6', 'modalContent6')
 
 block content
 	div.body.body--start(class!= pageClassName)

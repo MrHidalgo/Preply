@@ -1043,7 +1043,7 @@ picture {
 /* line 4, src/scss/_macros/_modal.scss */
 .c-modal#ques1, .c-modal#ques2, .c-modal#ques3, .c-modal#ques4, .c-modal#ques5, .c-modal#ques6 {
   width: 100%;
-  max-width: 481px;
+  max-width: 500px;
   padding: 48px;
   -webkit-box-shadow: 0 4px 28px 0 rgba(0, 0, 0, 0.08);
           box-shadow: 0 4px 28px 0 rgba(0, 0, 0, 0.08);
@@ -1081,23 +1081,32 @@ picture {
 }
 
 /* line 43, src/scss/_macros/_modal.scss */
+.c-modal#ques1 .c-modal__body a, .c-modal#ques2 .c-modal__body a, .c-modal#ques3 .c-modal__body a, .c-modal#ques4 .c-modal__body a, .c-modal#ques5 .c-modal__body a, .c-modal#ques6 .c-modal__body a {
+  padding-bottom: 16px;
+  font-size: 16px;
+  line-height: 24px;
+  color: #3bb3bd;
+  text-decoration: underline;
+}
+
+/* line 51, src/scss/_macros/_modal.scss */
 .c-modal#ques1 .c-modal__body ul, .c-modal#ques2 .c-modal__body ul, .c-modal#ques3 .c-modal__body ul, .c-modal#ques4 .c-modal__body ul, .c-modal#ques5 .c-modal__body ul, .c-modal#ques6 .c-modal__body ul {
   padding-left: 20px;
 }
 
-/* line 46, src/scss/_macros/_modal.scss */
+/* line 54, src/scss/_macros/_modal.scss */
 .c-modal#ques1 .c-modal__body ul li, .c-modal#ques2 .c-modal__body ul li, .c-modal#ques3 .c-modal__body ul li, .c-modal#ques4 .c-modal__body ul li, .c-modal#ques5 .c-modal__body ul li, .c-modal#ques6 .c-modal__body ul li {
   list-style-type: disc;
   font-size: 18px;
   color: #3bb3bd;
 }
 
-/* line 51, src/scss/_macros/_modal.scss */
+/* line 59, src/scss/_macros/_modal.scss */
 .c-modal#ques1 .c-modal__body ul li:not(:last-of-type), .c-modal#ques2 .c-modal__body ul li:not(:last-of-type), .c-modal#ques3 .c-modal__body ul li:not(:last-of-type), .c-modal#ques4 .c-modal__body ul li:not(:last-of-type), .c-modal#ques5 .c-modal__body ul li:not(:last-of-type), .c-modal#ques6 .c-modal__body ul li:not(:last-of-type) {
   padding-bottom: 12px;
 }
 
-/* line 56, src/scss/_macros/_modal.scss */
+/* line 64, src/scss/_macros/_modal.scss */
 .c-modal#ques1 .c-modal__body ul span, .c-modal#ques2 .c-modal__body ul span, .c-modal#ques3 .c-modal__body ul span, .c-modal#ques4 .c-modal__body ul span, .c-modal#ques5 .c-modal__body ul span, .c-modal#ques6 .c-modal__body ul span {
   font-size: 16px;
   line-height: 24px;
@@ -1958,7 +1967,71 @@ picture {
   }
 }
 
-/* line 35, src/scss/_components/main/_main.scss */
+/* line 34, src/scss/_components/main/_main.scss */
+.main__bg-arrow {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 15px;
+  display: block;
+  width: 24px;
+  height: 70px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@media screen and (max-width: 1279px) {
+  /* line 34, src/scss/_components/main/_main.scss */
+  .main__bg-arrow {
+    display: none;
+  }
+}
+
+/* line 48, src/scss/_components/main/_main.scss */
+.main__bg-arrow span {
+  display: block;
+  -webkit-transform: rotate(45deg);
+      -ms-transform: rotate(45deg);
+          transform: rotate(45deg);
+  border-right: 2px solid white;
+  border-bottom: 2px solid white;
+  margin: 0 0 3px 4px;
+  width: 16px;
+  height: 16px;
+  -webkit-filter: drop-shadow(2px 2px 3px black);
+          filter: drop-shadow(2px 2px 3px black);
+  -webkit-animation: mouse-wave 1s infinite;
+          animation: mouse-wave 1s infinite;
+}
+
+/* line 59, src/scss/_components/main/_main.scss */
+.main__bg-arrow span:nth-of-type(1) {
+  margin-top: 1px;
+  -webkit-animation-delay: .1s;
+          animation-delay: .1s;
+  -webkit-animation-direction: alternate;
+          animation-direction: alternate;
+}
+
+/* line 64, src/scss/_components/main/_main.scss */
+.main__bg-arrow span:nth-of-type(2) {
+  margin-top: -6px;
+  -webkit-animation-delay: .2s;
+          animation-delay: .2s;
+  -webkit-animation-direction: alternate;
+          animation-direction: alternate;
+}
+
+/* line 69, src/scss/_components/main/_main.scss */
+.main__bg-arrow span:nth-of-type(3) {
+  margin-top: -6px;
+  -webkit-animation-delay: .3s;
+          animation-delay: .3s;
+  -webkit-animation-direction: alternate;
+          animation-direction: alternate;
+}
+
+/* line 78, src/scss/_components/main/_main.scss */
 .main__wrapper {
   z-index: 2;
   position: relative;
@@ -1971,7 +2044,7 @@ picture {
 }
 
 @media screen and (max-width: 1023px) {
-  /* line 35, src/scss/_components/main/_main.scss */
+  /* line 78, src/scss/_components/main/_main.scss */
   .main__wrapper {
     -webkit-box-align: center;
     -webkit-align-items: center;
@@ -1986,26 +2059,26 @@ picture {
 }
 
 @media screen and (max-width: 767px) {
-  /* line 35, src/scss/_components/main/_main.scss */
+  /* line 78, src/scss/_components/main/_main.scss */
   .main__wrapper {
     padding-left: 15px;
     padding-right: 15px;
   }
 }
 
-/* line 51, src/scss/_components/main/_main.scss */
+/* line 94, src/scss/_components/main/_main.scss */
 .main__content {
   display: none;
 }
 
 @media screen and (max-width: 1023px) {
-  /* line 51, src/scss/_components/main/_main.scss */
+  /* line 94, src/scss/_components/main/_main.scss */
   .main__content {
     display: block;
   }
 }
 
-/* line 58, src/scss/_components/main/_main.scss */
+/* line 101, src/scss/_components/main/_main.scss */
 .main__block {
   position: relative;
   width: 100%;
@@ -2019,18 +2092,18 @@ picture {
 }
 
 @media screen and (max-width: 1023px) {
-  /* line 58, src/scss/_components/main/_main.scss */
+  /* line 101, src/scss/_components/main/_main.scss */
   .main__block {
     max-width: 608px;
     padding-top: 40px;
     padding-bottom: 32px;
   }
-  /* line 71, src/scss/_components/main/_main.scss */
+  /* line 114, src/scss/_components/main/_main.scss */
   .main__block .main__title,
   .main__block .main__desc {
     display: none;
   }
-  /* line 76, src/scss/_components/main/_main.scss */
+  /* line 119, src/scss/_components/main/_main.scss */
   .main__block > div {
     width: 100%;
     max-width: 375px;
@@ -2040,13 +2113,13 @@ picture {
 }
 
 @media screen and (max-width: 767px) {
-  /* line 58, src/scss/_components/main/_main.scss */
+  /* line 101, src/scss/_components/main/_main.scss */
   .main__block {
     padding: 20px;
   }
 }
 
-/* line 88, src/scss/_components/main/_main.scss */
+/* line 131, src/scss/_components/main/_main.scss */
 .main__title {
   padding-bottom: 16px;
   font-weight: bold;
@@ -2057,14 +2130,14 @@ picture {
 }
 
 @media screen and (max-width: 1023px) {
-  /* line 88, src/scss/_components/main/_main.scss */
+  /* line 131, src/scss/_components/main/_main.scss */
   .main__title {
     color: #ffffff;
   }
 }
 
 @media screen and (max-width: 767px) {
-  /* line 88, src/scss/_components/main/_main.scss */
+  /* line 131, src/scss/_components/main/_main.scss */
   .main__title {
     padding-bottom: 10px;
     font-size: 36px;
@@ -2072,7 +2145,7 @@ picture {
   }
 }
 
-/* line 105, src/scss/_components/main/_main.scss */
+/* line 148, src/scss/_components/main/_main.scss */
 .main__desc {
   padding-bottom: 32px;
   font-size: 20px;
@@ -2082,7 +2155,7 @@ picture {
 }
 
 @media screen and (max-width: 1023px) {
-  /* line 105, src/scss/_components/main/_main.scss */
+  /* line 148, src/scss/_components/main/_main.scss */
   .main__desc {
     color: rgba(255, 255, 255, 0.8);
     text-align: center;
@@ -2090,14 +2163,14 @@ picture {
 }
 
 @media screen and (max-width: 767px) {
-  /* line 105, src/scss/_components/main/_main.scss */
+  /* line 148, src/scss/_components/main/_main.scss */
   .main__desc {
     padding-bottom: 20px;
     line-height: 20px;
   }
 }
 
-/* line 121, src/scss/_components/main/_main.scss */
+/* line 164, src/scss/_components/main/_main.scss */
 .main__form {
   display: -webkit-box;
   display: -webkit-flex;
@@ -2110,32 +2183,32 @@ picture {
           flex-direction: column;
 }
 
-/* line 125, src/scss/_components/main/_main.scss */
+/* line 168, src/scss/_components/main/_main.scss */
 .main__form-field {
   width: 100%;
   padding-bottom: 16px;
 }
 
 @media screen and (max-width: 767px) {
-  /* line 125, src/scss/_components/main/_main.scss */
+  /* line 168, src/scss/_components/main/_main.scss */
   .main__form-field {
     padding-bottom: 12px;
   }
 }
 
-/* line 132, src/scss/_components/main/_main.scss */
+/* line 175, src/scss/_components/main/_main.scss */
 .main__form-field--button {
   padding-top: 8px;
 }
 
 @media screen and (max-width: 767px) {
-  /* line 132, src/scss/_components/main/_main.scss */
+  /* line 175, src/scss/_components/main/_main.scss */
   .main__form-field--button {
     padding-top: 4px;
   }
 }
 
-/* line 140, src/scss/_components/main/_main.scss */
+/* line 183, src/scss/_components/main/_main.scss */
 .main__form input {
   outline: none;
   position: relative;
@@ -2188,7 +2261,7 @@ picture {
 }
 
 @media screen and (max-width: 767px) {
-  /* line 140, src/scss/_components/main/_main.scss */
+  /* line 183, src/scss/_components/main/_main.scss */
   .main__form input {
     height: 48px;
     font-size: 16px;
@@ -2215,18 +2288,18 @@ picture {
   }
 }
 
-/* line 166, src/scss/_components/main/_main.scss */
+/* line 209, src/scss/_components/main/_main.scss */
 .main__form .c-btn {
   width: 100%;
   height: 56px;
 }
 
-/* line 170, src/scss/_components/main/_main.scss */
+/* line 213, src/scss/_components/main/_main.scss */
 .main__form .c-btn span {
   font-size: 18px;
 }
 
-/* line 176, src/scss/_components/main/_main.scss */
+/* line 219, src/scss/_components/main/_main.scss */
 .main__divider {
   display: -webkit-box;
   display: -webkit-flex;
@@ -2241,14 +2314,14 @@ picture {
 }
 
 @media screen and (max-width: 767px) {
-  /* line 176, src/scss/_components/main/_main.scss */
+  /* line 219, src/scss/_components/main/_main.scss */
   .main__divider {
     padding-top: 8px;
     padding-bottom: 20px;
   }
 }
 
-/* line 186, src/scss/_components/main/_main.scss */
+/* line 229, src/scss/_components/main/_main.scss */
 .main__divider p {
   padding-left: 17px;
   padding-right: 17px;
@@ -2258,7 +2331,7 @@ picture {
 }
 
 @media screen and (max-width: 767px) {
-  /* line 186, src/scss/_components/main/_main.scss */
+  /* line 229, src/scss/_components/main/_main.scss */
   .main__divider p {
     font-size: 14px;
     padding-left: 10px;
@@ -2266,7 +2339,7 @@ picture {
   }
 }
 
-/* line 199, src/scss/_components/main/_main.scss */
+/* line 242, src/scss/_components/main/_main.scss */
 .main__divider span {
   -webkit-box-flex: 1;
   -webkit-flex: 1;
@@ -2278,7 +2351,7 @@ picture {
   background-color: #e3e3e3;
 }
 
-/* line 208, src/scss/_components/main/_main.scss */
+/* line 251, src/scss/_components/main/_main.scss */
 .main__btn {
   -webkit-box-pack: justify;
   -webkit-justify-content: space-between;
@@ -2288,13 +2361,13 @@ picture {
 }
 
 @media screen and (max-width: 767px) {
-  /* line 208, src/scss/_components/main/_main.scss */
+  /* line 251, src/scss/_components/main/_main.scss */
   .main__btn {
     padding-bottom: 20px;
   }
 }
 
-/* line 215, src/scss/_components/main/_main.scss */
+/* line 258, src/scss/_components/main/_main.scss */
 .main__btn .c-btn {
   width: 100%;
   max-width: -webkit-calc((100% - 20px) / 2);
@@ -2303,14 +2376,14 @@ picture {
 }
 
 @media screen and (max-width: 767px) {
-  /* line 215, src/scss/_components/main/_main.scss */
+  /* line 258, src/scss/_components/main/_main.scss */
   .main__btn .c-btn {
     max-width: -webkit-calc((100% - 10px) / 2);
     max-width: calc((100% - 10px) / 2);
   }
 }
 
-/* line 223, src/scss/_components/main/_main.scss */
+/* line 266, src/scss/_components/main/_main.scss */
 .main__btn .c-btn img {
   display: block;
   max-width: 20px;
@@ -2318,12 +2391,12 @@ picture {
   margin-right: 12px;
 }
 
-/* line 230, src/scss/_components/main/_main.scss */
+/* line 273, src/scss/_components/main/_main.scss */
 .main__btn .c-btn span {
   color: #384047;
 }
 
-/* line 236, src/scss/_components/main/_main.scss */
+/* line 279, src/scss/_components/main/_main.scss */
 .main__info {
   font-size: 13px;
   line-height: 20px;
@@ -2333,23 +2406,47 @@ picture {
 }
 
 @media screen and (max-width: 767px) {
-  /* line 236, src/scss/_components/main/_main.scss */
+  /* line 279, src/scss/_components/main/_main.scss */
   .main__info {
     width: 100%;
     max-width: 240px;
     margin-left: auto;
     margin-right: auto;
   }
-  /* line 248, src/scss/_components/main/_main.scss */
+  /* line 291, src/scss/_components/main/_main.scss */
   .main__info br {
     display: none;
   }
 }
 
-/* line 253, src/scss/_components/main/_main.scss */
+/* line 296, src/scss/_components/main/_main.scss */
 .main__info a {
   font-weight: 500;
   color: #6f757b;
+}
+
+@-webkit-keyframes mouse-wave {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: .5;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes mouse-wave {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: .5;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 
 /* line 3, src/scss/_components/main/_benefits.scss */
